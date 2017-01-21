@@ -64,12 +64,23 @@
             this.grpOrderInfo = new System.Windows.Forms.GroupBox();
             this.nudPizzaCount = new System.Windows.Forms.NumericUpDown();
             this.lblPizzaCount = new System.Windows.Forms.Label();
+            this.grpPaymentInfo = new System.Windows.Forms.GroupBox();
+            this.cboPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.lblPaymentMethod = new System.Windows.Forms.Label();
+            this.lblMaxPizzas = new System.Windows.Forms.Label();
+            this.lblSubtotalText = new System.Windows.Forms.Label();
+            this.lblTaxText = new System.Windows.Forms.Label();
+            this.lblTotalText = new System.Windows.Forms.Label();
+            this.lblSubtotalValue = new System.Windows.Forms.Label();
+            this.lblTaxValue = new System.Windows.Forms.Label();
+            this.lblTotalValue = new System.Windows.Forms.Label();
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.grpToppings.SuspendLayout();
             this.grpPizzaSize.SuspendLayout();
             this.grpOrderInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPizzaCount)).BeginInit();
+            this.grpPaymentInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpCustomerData
@@ -408,6 +419,7 @@
             // 
             // grpOrderInfo
             // 
+            this.grpOrderInfo.Controls.Add(this.lblMaxPizzas);
             this.grpOrderInfo.Controls.Add(this.lblPizzaCount);
             this.grpOrderInfo.Controls.Add(this.nudPizzaCount);
             this.grpOrderInfo.Controls.Add(this.grpPizzaSize);
@@ -421,7 +433,7 @@
             // 
             // nudPizzaCount
             // 
-            this.nudPizzaCount.Location = new System.Drawing.Point(104, 376);
+            this.nudPizzaCount.Location = new System.Drawing.Point(71, 376);
             this.nudPizzaCount.Maximum = new decimal(new int[] {
             10,
             0,
@@ -433,7 +445,7 @@
             0,
             0});
             this.nudPizzaCount.Name = "nudPizzaCount";
-            this.nudPizzaCount.Size = new System.Drawing.Size(47, 20);
+            this.nudPizzaCount.Size = new System.Drawing.Size(31, 20);
             this.nudPizzaCount.TabIndex = 6;
             this.nudPizzaCount.Value = new decimal(new int[] {
             1,
@@ -450,12 +462,120 @@
             this.lblPizzaCount.TabIndex = 7;
             this.lblPizzaCount.Text = "Quantity";
             // 
+            // grpPaymentInfo
+            // 
+            this.grpPaymentInfo.Controls.Add(this.lblTotalValue);
+            this.grpPaymentInfo.Controls.Add(this.lblTaxValue);
+            this.grpPaymentInfo.Controls.Add(this.lblSubtotalValue);
+            this.grpPaymentInfo.Controls.Add(this.lblTotalText);
+            this.grpPaymentInfo.Controls.Add(this.lblTaxText);
+            this.grpPaymentInfo.Controls.Add(this.lblPaymentMethod);
+            this.grpPaymentInfo.Controls.Add(this.lblSubtotalText);
+            this.grpPaymentInfo.Controls.Add(this.cboPaymentMethod);
+            this.grpPaymentInfo.Location = new System.Drawing.Point(12, 367);
+            this.grpPaymentInfo.Name = "grpPaymentInfo";
+            this.grpPaymentInfo.Size = new System.Drawing.Size(298, 119);
+            this.grpPaymentInfo.TabIndex = 7;
+            this.grpPaymentInfo.TabStop = false;
+            this.grpPaymentInfo.Text = "Payment and Pricing";
+            // 
+            // cboPaymentMethod
+            // 
+            this.cboPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPaymentMethod.Items.AddRange(new object[] {
+            "Cash",
+            "Check",
+            "Visa",
+            "Discover",
+            "American Express",
+            "Other Credit/Debit"});
+            this.cboPaymentMethod.Location = new System.Drawing.Point(6, 61);
+            this.cboPaymentMethod.Name = "cboPaymentMethod";
+            this.cboPaymentMethod.Size = new System.Drawing.Size(121, 21);
+            this.cboPaymentMethod.TabIndex = 0;
+            // 
+            // lblPaymentMethod
+            // 
+            this.lblPaymentMethod.AutoSize = true;
+            this.lblPaymentMethod.Location = new System.Drawing.Point(12, 33);
+            this.lblPaymentMethod.Name = "lblPaymentMethod";
+            this.lblPaymentMethod.Size = new System.Drawing.Size(87, 13);
+            this.lblPaymentMethod.TabIndex = 1;
+            this.lblPaymentMethod.Text = "Payment Method";
+            // 
+            // lblMaxPizzas
+            // 
+            this.lblMaxPizzas.AutoSize = true;
+            this.lblMaxPizzas.Location = new System.Drawing.Point(108, 378);
+            this.lblMaxPizzas.Name = "lblMaxPizzas";
+            this.lblMaxPizzas.Size = new System.Drawing.Size(48, 13);
+            this.lblMaxPizzas.TabIndex = 8;
+            this.lblMaxPizzas.Text = "(Max 10)";
+            // 
+            // lblSubtotalText
+            // 
+            this.lblSubtotalText.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSubtotalText.AutoSize = true;
+            this.lblSubtotalText.Location = new System.Drawing.Point(143, 16);
+            this.lblSubtotalText.Name = "lblSubtotalText";
+            this.lblSubtotalText.Size = new System.Drawing.Size(49, 13);
+            this.lblSubtotalText.TabIndex = 2;
+            this.lblSubtotalText.Text = "Subtotal:";
+            // 
+            // lblTaxText
+            // 
+            this.lblTaxText.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTaxText.AutoSize = true;
+            this.lblTaxText.Location = new System.Drawing.Point(143, 52);
+            this.lblTaxText.Name = "lblTaxText";
+            this.lblTaxText.Size = new System.Drawing.Size(28, 13);
+            this.lblTaxText.TabIndex = 3;
+            this.lblTaxText.Text = "Tax:";
+            // 
+            // lblTotalText
+            // 
+            this.lblTotalText.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTotalText.AutoSize = true;
+            this.lblTotalText.Location = new System.Drawing.Point(143, 88);
+            this.lblTotalText.Name = "lblTotalText";
+            this.lblTotalText.Size = new System.Drawing.Size(34, 13);
+            this.lblTotalText.TabIndex = 4;
+            this.lblTotalText.Text = "Total:";
+            // 
+            // lblSubtotalValue
+            // 
+            this.lblSubtotalValue.AutoSize = true;
+            this.lblSubtotalValue.Location = new System.Drawing.Point(217, 16);
+            this.lblSubtotalValue.Name = "lblSubtotalValue";
+            this.lblSubtotalValue.Size = new System.Drawing.Size(34, 13);
+            this.lblSubtotalValue.TabIndex = 5;
+            this.lblSubtotalValue.Text = "$0.00";
+            // 
+            // lblTaxValue
+            // 
+            this.lblTaxValue.AutoSize = true;
+            this.lblTaxValue.Location = new System.Drawing.Point(217, 52);
+            this.lblTaxValue.Name = "lblTaxValue";
+            this.lblTaxValue.Size = new System.Drawing.Size(34, 13);
+            this.lblTaxValue.TabIndex = 6;
+            this.lblTaxValue.Text = "$0.00";
+            // 
+            // lblTotalValue
+            // 
+            this.lblTotalValue.AutoSize = true;
+            this.lblTotalValue.Location = new System.Drawing.Point(217, 88);
+            this.lblTotalValue.Name = "lblTotalValue";
+            this.lblTotalValue.Size = new System.Drawing.Size(34, 13);
+            this.lblTotalValue.TabIndex = 7;
+            this.lblTotalValue.Text = "$0.00";
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(1172, 591);
+            this.Controls.Add(this.grpPaymentInfo);
             this.Controls.Add(this.grpOrderInfo);
             this.Controls.Add(this.lblCurrentDateTime);
             this.Controls.Add(this.lblParlorName);
@@ -473,6 +593,8 @@
             this.grpOrderInfo.ResumeLayout(false);
             this.grpOrderInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPizzaCount)).EndInit();
+            this.grpPaymentInfo.ResumeLayout(false);
+            this.grpPaymentInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,6 +638,16 @@
         private System.Windows.Forms.GroupBox grpOrderInfo;
         private System.Windows.Forms.Label lblPizzaCount;
         private System.Windows.Forms.NumericUpDown nudPizzaCount;
+        private System.Windows.Forms.GroupBox grpPaymentInfo;
+        private System.Windows.Forms.ComboBox cboPaymentMethod;
+        private System.Windows.Forms.Label lblPaymentMethod;
+        private System.Windows.Forms.Label lblMaxPizzas;
+        private System.Windows.Forms.Label lblTotalValue;
+        private System.Windows.Forms.Label lblTaxValue;
+        private System.Windows.Forms.Label lblSubtotalValue;
+        private System.Windows.Forms.Label lblTotalText;
+        private System.Windows.Forms.Label lblTaxText;
+        private System.Windows.Forms.Label lblSubtotalText;
     }
 }
 
