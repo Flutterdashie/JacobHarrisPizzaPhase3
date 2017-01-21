@@ -57,9 +57,14 @@
             this.chkToppingMushroom = new System.Windows.Forms.CheckBox();
             this.chkToppingOlive = new System.Windows.Forms.CheckBox();
             this.chkToppingPineapple = new System.Windows.Forms.CheckBox();
+            this.grpPizzaSize = new System.Windows.Forms.GroupBox();
+            this.radSizeSmall = new System.Windows.Forms.RadioButton();
+            this.radSizeMedium = new System.Windows.Forms.RadioButton();
+            this.radSizeLarge = new System.Windows.Forms.RadioButton();
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.grpToppings.SuspendLayout();
+            this.grpPizzaSize.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpCustomerData
@@ -351,12 +356,58 @@
             this.chkToppingPineapple.Text = "Pineapple";
             this.chkToppingPineapple.UseVisualStyleBackColor = true;
             // 
+            // grpPizzaSize
+            // 
+            this.grpPizzaSize.Controls.Add(this.radSizeLarge);
+            this.grpPizzaSize.Controls.Add(this.radSizeMedium);
+            this.grpPizzaSize.Controls.Add(this.radSizeSmall);
+            this.grpPizzaSize.Location = new System.Drawing.Point(460, 367);
+            this.grpPizzaSize.Name = "grpPizzaSize";
+            this.grpPizzaSize.Size = new System.Drawing.Size(129, 93);
+            this.grpPizzaSize.TabIndex = 5;
+            this.grpPizzaSize.TabStop = false;
+            this.grpPizzaSize.Text = "Size";
+            // 
+            // radSizeSmall
+            // 
+            this.radSizeSmall.AutoSize = true;
+            this.radSizeSmall.Location = new System.Drawing.Point(7, 20);
+            this.radSizeSmall.Name = "radSizeSmall";
+            this.radSizeSmall.Size = new System.Drawing.Size(86, 17);
+            this.radSizeSmall.TabIndex = 0;
+            this.radSizeSmall.TabStop = true;
+            this.radSizeSmall.Text = "Small ($9.00)";
+            this.radSizeSmall.UseVisualStyleBackColor = true;
+            // 
+            // radSizeMedium
+            // 
+            this.radSizeMedium.AutoSize = true;
+            this.radSizeMedium.Location = new System.Drawing.Point(7, 44);
+            this.radSizeMedium.Name = "radSizeMedium";
+            this.radSizeMedium.Size = new System.Drawing.Size(104, 17);
+            this.radSizeMedium.TabIndex = 1;
+            this.radSizeMedium.TabStop = true;
+            this.radSizeMedium.Text = "Medium ($12.00)";
+            this.radSizeMedium.UseVisualStyleBackColor = true;
+            // 
+            // radSizeLarge
+            // 
+            this.radSizeLarge.AutoSize = true;
+            this.radSizeLarge.Location = new System.Drawing.Point(7, 68);
+            this.radSizeLarge.Name = "radSizeLarge";
+            this.radSizeLarge.Size = new System.Drawing.Size(94, 17);
+            this.radSizeLarge.TabIndex = 2;
+            this.radSizeLarge.TabStop = true;
+            this.radSizeLarge.Text = "Large ($15.00)";
+            this.radSizeLarge.UseVisualStyleBackColor = true;
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(1172, 591);
+            this.Controls.Add(this.grpPizzaSize);
             this.Controls.Add(this.grpToppings);
             this.Controls.Add(this.lblCurrentDateTime);
             this.Controls.Add(this.lblParlorName);
@@ -369,6 +420,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).EndInit();
             this.grpToppings.ResumeLayout(false);
             this.grpToppings.PerformLayout();
+            this.grpPizzaSize.ResumeLayout(false);
+            this.grpPizzaSize.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,6 +458,10 @@
         private System.Windows.Forms.CheckBox chkToppingChicken;
         private System.Windows.Forms.CheckBox chkToppingPepper;
         private System.Windows.Forms.CheckBox chkToppingPineapple;
+        private System.Windows.Forms.GroupBox grpPizzaSize;
+        private System.Windows.Forms.RadioButton radSizeLarge;
+        private System.Windows.Forms.RadioButton radSizeMedium;
+        private System.Windows.Forms.RadioButton radSizeSmall;
     }
 }
 
