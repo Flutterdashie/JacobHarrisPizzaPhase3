@@ -102,7 +102,7 @@
             this.grpCustomerData.Location = new System.Drawing.Point(12, 79);
             this.grpCustomerData.Name = "grpCustomerData";
             this.grpCustomerData.Size = new System.Drawing.Size(299, 282);
-            this.grpCustomerData.TabIndex = 0;
+            this.grpCustomerData.TabIndex = 1;
             this.grpCustomerData.TabStop = false;
             this.grpCustomerData.Text = "Customer Information";
             // 
@@ -112,7 +112,7 @@
             this.txtCustPhone.Mask = "(999) 000-0000";
             this.txtCustPhone.Name = "txtCustPhone";
             this.txtCustPhone.Size = new System.Drawing.Size(82, 20);
-            this.txtCustPhone.TabIndex = 0;
+            this.txtCustPhone.TabIndex = 3;
             // 
             // lblCustPhone
             // 
@@ -120,7 +120,7 @@
             this.lblCustPhone.Location = new System.Drawing.Point(12, 61);
             this.lblCustPhone.Name = "lblCustPhone";
             this.lblCustPhone.Size = new System.Drawing.Size(78, 13);
-            this.lblCustPhone.TabIndex = 1;
+            this.lblCustPhone.TabIndex = 2;
             this.lblCustPhone.Text = "Phone Number";
             // 
             // txtCustName
@@ -129,7 +129,7 @@
             this.txtCustName.MaxLength = 25;
             this.txtCustName.Name = "txtCustName";
             this.txtCustName.Size = new System.Drawing.Size(162, 20);
-            this.txtCustName.TabIndex = 2;
+            this.txtCustName.TabIndex = 1;
             // 
             // lblCustName
             // 
@@ -137,7 +137,7 @@
             this.lblCustName.Location = new System.Drawing.Point(12, 24);
             this.lblCustName.Name = "lblCustName";
             this.lblCustName.Size = new System.Drawing.Size(35, 13);
-            this.lblCustName.TabIndex = 3;
+            this.lblCustName.TabIndex = 0;
             this.lblCustName.Text = "Name";
             // 
             // lblCustAddress1
@@ -155,7 +155,7 @@
             this.lblCustAddress2.Location = new System.Drawing.Point(12, 135);
             this.lblCustAddress2.Name = "lblCustAddress2";
             this.lblCustAddress2.Size = new System.Drawing.Size(77, 13);
-            this.lblCustAddress2.TabIndex = 5;
+            this.lblCustAddress2.TabIndex = 6;
             this.lblCustAddress2.Text = "Address Line 2";
             // 
             // lblCustCity
@@ -164,7 +164,7 @@
             this.lblCustCity.Location = new System.Drawing.Point(12, 172);
             this.lblCustCity.Name = "lblCustCity";
             this.lblCustCity.Size = new System.Drawing.Size(24, 13);
-            this.lblCustCity.TabIndex = 6;
+            this.lblCustCity.TabIndex = 8;
             this.lblCustCity.Text = "City";
             // 
             // lblCustState
@@ -173,7 +173,7 @@
             this.lblCustState.Location = new System.Drawing.Point(12, 209);
             this.lblCustState.Name = "lblCustState";
             this.lblCustState.Size = new System.Drawing.Size(32, 13);
-            this.lblCustState.TabIndex = 7;
+            this.lblCustState.TabIndex = 10;
             this.lblCustState.Text = "State";
             // 
             // lblCustZipCode
@@ -182,7 +182,7 @@
             this.lblCustZipCode.Location = new System.Drawing.Point(12, 245);
             this.lblCustZipCode.Name = "lblCustZipCode";
             this.lblCustZipCode.Size = new System.Drawing.Size(50, 13);
-            this.lblCustZipCode.TabIndex = 8;
+            this.lblCustZipCode.TabIndex = 12;
             this.lblCustZipCode.Text = "Zip Code";
             // 
             // txtCustAddress1
@@ -191,7 +191,7 @@
             this.txtCustAddress1.MaxLength = 25;
             this.txtCustAddress1.Name = "txtCustAddress1";
             this.txtCustAddress1.Size = new System.Drawing.Size(177, 20);
-            this.txtCustAddress1.TabIndex = 9;
+            this.txtCustAddress1.TabIndex = 5;
             // 
             // txtCustAddress2
             // 
@@ -199,7 +199,7 @@
             this.txtCustAddress2.MaxLength = 25;
             this.txtCustAddress2.Name = "txtCustAddress2";
             this.txtCustAddress2.Size = new System.Drawing.Size(177, 20);
-            this.txtCustAddress2.TabIndex = 10;
+            this.txtCustAddress2.TabIndex = 7;
             // 
             // txtCustCity
             // 
@@ -207,7 +207,7 @@
             this.txtCustCity.MaxLength = 25;
             this.txtCustCity.Name = "txtCustCity";
             this.txtCustCity.Size = new System.Drawing.Size(177, 20);
-            this.txtCustCity.TabIndex = 11;
+            this.txtCustCity.TabIndex = 9;
             // 
             // cboCustCity
             // 
@@ -215,7 +215,7 @@
             this.cboCustCity.Location = new System.Drawing.Point(110, 206);
             this.cboCustCity.Name = "cboCustCity";
             this.cboCustCity.Size = new System.Drawing.Size(46, 21);
-            this.cboCustCity.TabIndex = 12;
+            this.cboCustCity.TabIndex = 11;
             // 
             // txtCustZipCode
             // 
@@ -241,7 +241,7 @@
             this.lblParlorName.Location = new System.Drawing.Point(32, 16);
             this.lblParlorName.Name = "lblParlorName";
             this.lblParlorName.Size = new System.Drawing.Size(406, 60);
-            this.lblParlorName.TabIndex = 2;
+            this.lblParlorName.TabIndex = 0;
             this.lblParlorName.Text = "Tropical Pizza";
             // 
             // lblCurrentDateTime
@@ -250,7 +250,7 @@
             this.lblCurrentDateTime.Location = new System.Drawing.Point(885, 20);
             this.lblCurrentDateTime.Name = "lblCurrentDateTime";
             this.lblCurrentDateTime.Size = new System.Drawing.Size(89, 13);
-            this.lblCurrentDateTime.TabIndex = 3;
+            this.lblCurrentDateTime.TabIndex = 4;
             this.lblCurrentDateTime.Text = "Placeholder Date";
             // 
             // grpToppings
@@ -268,7 +268,7 @@
             this.grpToppings.Location = new System.Drawing.Point(22, 16);
             this.grpToppings.Name = "grpToppings";
             this.grpToppings.Size = new System.Drawing.Size(129, 255);
-            this.grpToppings.TabIndex = 4;
+            this.grpToppings.TabIndex = 0;
             this.grpToppings.TabStop = false;
             this.grpToppings.Text = "Toppings";
             // 
@@ -380,7 +380,7 @@
             this.grpPizzaSize.Location = new System.Drawing.Point(22, 277);
             this.grpPizzaSize.Name = "grpPizzaSize";
             this.grpPizzaSize.Size = new System.Drawing.Size(129, 93);
-            this.grpPizzaSize.TabIndex = 5;
+            this.grpPizzaSize.TabIndex = 1;
             this.grpPizzaSize.TabStop = false;
             this.grpPizzaSize.Text = "Size";
             // 
@@ -427,7 +427,7 @@
             this.grpOrderInfo.Location = new System.Drawing.Point(317, 79);
             this.grpOrderInfo.Name = "grpOrderInfo";
             this.grpOrderInfo.Size = new System.Drawing.Size(168, 408);
-            this.grpOrderInfo.TabIndex = 6;
+            this.grpOrderInfo.TabIndex = 3;
             this.grpOrderInfo.TabStop = false;
             this.grpOrderInfo.Text = "Order Information";
             // 
@@ -446,7 +446,7 @@
             0});
             this.nudPizzaCount.Name = "nudPizzaCount";
             this.nudPizzaCount.Size = new System.Drawing.Size(31, 20);
-            this.nudPizzaCount.TabIndex = 6;
+            this.nudPizzaCount.TabIndex = 3;
             this.nudPizzaCount.Value = new decimal(new int[] {
             1,
             0,
@@ -459,7 +459,7 @@
             this.lblPizzaCount.Location = new System.Drawing.Point(19, 378);
             this.lblPizzaCount.Name = "lblPizzaCount";
             this.lblPizzaCount.Size = new System.Drawing.Size(46, 13);
-            this.lblPizzaCount.TabIndex = 7;
+            this.lblPizzaCount.TabIndex = 2;
             this.lblPizzaCount.Text = "Quantity";
             // 
             // grpPaymentInfo
@@ -475,7 +475,7 @@
             this.grpPaymentInfo.Location = new System.Drawing.Point(12, 367);
             this.grpPaymentInfo.Name = "grpPaymentInfo";
             this.grpPaymentInfo.Size = new System.Drawing.Size(298, 119);
-            this.grpPaymentInfo.TabIndex = 7;
+            this.grpPaymentInfo.TabIndex = 2;
             this.grpPaymentInfo.TabStop = false;
             this.grpPaymentInfo.Text = "Payment and Pricing";
             // 
@@ -492,7 +492,7 @@
             this.cboPaymentMethod.Location = new System.Drawing.Point(6, 61);
             this.cboPaymentMethod.Name = "cboPaymentMethod";
             this.cboPaymentMethod.Size = new System.Drawing.Size(121, 21);
-            this.cboPaymentMethod.TabIndex = 0;
+            this.cboPaymentMethod.TabIndex = 1;
             // 
             // lblPaymentMethod
             // 
@@ -500,7 +500,7 @@
             this.lblPaymentMethod.Location = new System.Drawing.Point(12, 33);
             this.lblPaymentMethod.Name = "lblPaymentMethod";
             this.lblPaymentMethod.Size = new System.Drawing.Size(87, 13);
-            this.lblPaymentMethod.TabIndex = 1;
+            this.lblPaymentMethod.TabIndex = 0;
             this.lblPaymentMethod.Text = "Payment Method";
             // 
             // lblMaxPizzas
@@ -509,7 +509,7 @@
             this.lblMaxPizzas.Location = new System.Drawing.Point(108, 378);
             this.lblMaxPizzas.Name = "lblMaxPizzas";
             this.lblMaxPizzas.Size = new System.Drawing.Size(48, 13);
-            this.lblMaxPizzas.TabIndex = 8;
+            this.lblMaxPizzas.TabIndex = 4;
             this.lblMaxPizzas.Text = "(Max 10)";
             // 
             // lblSubtotalText
@@ -529,7 +529,7 @@
             this.lblTaxText.Location = new System.Drawing.Point(143, 52);
             this.lblTaxText.Name = "lblTaxText";
             this.lblTaxText.Size = new System.Drawing.Size(28, 13);
-            this.lblTaxText.TabIndex = 3;
+            this.lblTaxText.TabIndex = 4;
             this.lblTaxText.Text = "Tax:";
             // 
             // lblTotalText
@@ -539,7 +539,7 @@
             this.lblTotalText.Location = new System.Drawing.Point(143, 88);
             this.lblTotalText.Name = "lblTotalText";
             this.lblTotalText.Size = new System.Drawing.Size(34, 13);
-            this.lblTotalText.TabIndex = 4;
+            this.lblTotalText.TabIndex = 6;
             this.lblTotalText.Text = "Total:";
             // 
             // lblSubtotalValue
@@ -548,7 +548,7 @@
             this.lblSubtotalValue.Location = new System.Drawing.Point(217, 16);
             this.lblSubtotalValue.Name = "lblSubtotalValue";
             this.lblSubtotalValue.Size = new System.Drawing.Size(34, 13);
-            this.lblSubtotalValue.TabIndex = 5;
+            this.lblSubtotalValue.TabIndex = 3;
             this.lblSubtotalValue.Text = "$0.00";
             // 
             // lblTaxValue
@@ -557,7 +557,7 @@
             this.lblTaxValue.Location = new System.Drawing.Point(217, 52);
             this.lblTaxValue.Name = "lblTaxValue";
             this.lblTaxValue.Size = new System.Drawing.Size(34, 13);
-            this.lblTaxValue.TabIndex = 6;
+            this.lblTaxValue.TabIndex = 5;
             this.lblTaxValue.Text = "$0.00";
             // 
             // lblTotalValue
