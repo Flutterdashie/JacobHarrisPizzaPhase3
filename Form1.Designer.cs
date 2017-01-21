@@ -43,7 +43,11 @@
             this.txtCustCity = new System.Windows.Forms.TextBox();
             this.cboCustCity = new System.Windows.Forms.ComboBox();
             this.txtCustZipCode = new System.Windows.Forms.MaskedTextBox();
+            this.picTropicalLogo = new System.Windows.Forms.PictureBox();
+            this.lblParlorName = new System.Windows.Forms.Label();
+            this.lblCurrentDateTime = new System.Windows.Forms.Label();
             this.grpCustomerData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // grpCustomerData
@@ -62,7 +66,7 @@
             this.grpCustomerData.Controls.Add(this.txtCustName);
             this.grpCustomerData.Controls.Add(this.lblCustPhone);
             this.grpCustomerData.Controls.Add(this.txtCustPhone);
-            this.grpCustomerData.Location = new System.Drawing.Point(44, 27);
+            this.grpCustomerData.Location = new System.Drawing.Point(12, 79);
             this.grpCustomerData.Name = "grpCustomerData";
             this.grpCustomerData.Size = new System.Drawing.Size(299, 282);
             this.grpCustomerData.TabIndex = 0;
@@ -188,17 +192,51 @@
             this.txtCustZipCode.Size = new System.Drawing.Size(65, 20);
             this.txtCustZipCode.TabIndex = 13;
             // 
+            // picTropicalLogo
+            // 
+            this.picTropicalLogo.Location = new System.Drawing.Point(892, 79);
+            this.picTropicalLogo.Name = "picTropicalLogo";
+            this.picTropicalLogo.Size = new System.Drawing.Size(268, 282);
+            this.picTropicalLogo.TabIndex = 1;
+            this.picTropicalLogo.TabStop = false;
+            // 
+            // lblParlorName
+            // 
+            this.lblParlorName.AutoSize = true;
+            this.lblParlorName.Font = new System.Drawing.Font("Showcard Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParlorName.ForeColor = System.Drawing.Color.DarkSalmon;
+            this.lblParlorName.Location = new System.Drawing.Point(32, 16);
+            this.lblParlorName.Name = "lblParlorName";
+            this.lblParlorName.Size = new System.Drawing.Size(406, 60);
+            this.lblParlorName.TabIndex = 2;
+            this.lblParlorName.Text = "Tropical Pizza";
+            // 
+            // lblCurrentDateTime
+            // 
+            this.lblCurrentDateTime.AutoSize = true;
+            this.lblCurrentDateTime.Location = new System.Drawing.Point(885, 20);
+            this.lblCurrentDateTime.Name = "lblCurrentDateTime";
+            this.lblCurrentDateTime.Size = new System.Drawing.Size(89, 13);
+            this.lblCurrentDateTime.TabIndex = 3;
+            this.lblCurrentDateTime.Text = "Placeholder Date";
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(1172, 591);
+            this.Controls.Add(this.lblCurrentDateTime);
+            this.Controls.Add(this.lblParlorName);
+            this.Controls.Add(this.picTropicalLogo);
             this.Controls.Add(this.grpCustomerData);
             this.Name = "frmPizzaOrder";
             this.Text = "Tropical Pizza Order Manager";
             this.grpCustomerData.ResumeLayout(false);
             this.grpCustomerData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -219,6 +257,9 @@
         private System.Windows.Forms.ComboBox cboCustCity;
         private System.Windows.Forms.TextBox txtCustCity;
         private System.Windows.Forms.MaskedTextBox txtCustZipCode;
+        private System.Windows.Forms.PictureBox picTropicalLogo;
+        private System.Windows.Forms.Label lblParlorName;
+        private System.Windows.Forms.Label lblCurrentDateTime;
     }
 }
 
