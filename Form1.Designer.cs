@@ -235,9 +235,11 @@
             // 
             // picTropicalLogo
             // 
+            this.picTropicalLogo.Image = global::JacobHarrisPizzaPhase1.Properties.Resources.PalmTree;
             this.picTropicalLogo.Location = new System.Drawing.Point(631, 16);
             this.picTropicalLogo.Name = "picTropicalLogo";
             this.picTropicalLogo.Size = new System.Drawing.Size(268, 520);
+            this.picTropicalLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picTropicalLogo.TabIndex = 1;
             this.picTropicalLogo.TabStop = false;
             // 
