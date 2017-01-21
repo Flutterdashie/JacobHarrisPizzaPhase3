@@ -61,10 +61,15 @@
             this.radSizeSmall = new System.Windows.Forms.RadioButton();
             this.radSizeMedium = new System.Windows.Forms.RadioButton();
             this.radSizeLarge = new System.Windows.Forms.RadioButton();
+            this.grpOrderInfo = new System.Windows.Forms.GroupBox();
+            this.nudPizzaCount = new System.Windows.Forms.NumericUpDown();
+            this.lblPizzaCount = new System.Windows.Forms.Label();
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.grpToppings.SuspendLayout();
             this.grpPizzaSize.SuspendLayout();
+            this.grpOrderInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPizzaCount)).BeginInit();
             this.SuspendLayout();
             // 
             // grpCustomerData
@@ -249,7 +254,7 @@
             this.grpToppings.Controls.Add(this.chkToppingHam);
             this.grpToppings.Controls.Add(this.chkToppingPepperoni);
             this.grpToppings.Controls.Add(this.chkToppingCheese);
-            this.grpToppings.Location = new System.Drawing.Point(460, 106);
+            this.grpToppings.Location = new System.Drawing.Point(22, 16);
             this.grpToppings.Name = "grpToppings";
             this.grpToppings.Size = new System.Drawing.Size(129, 255);
             this.grpToppings.TabIndex = 4;
@@ -361,7 +366,7 @@
             this.grpPizzaSize.Controls.Add(this.radSizeLarge);
             this.grpPizzaSize.Controls.Add(this.radSizeMedium);
             this.grpPizzaSize.Controls.Add(this.radSizeSmall);
-            this.grpPizzaSize.Location = new System.Drawing.Point(460, 367);
+            this.grpPizzaSize.Location = new System.Drawing.Point(22, 277);
             this.grpPizzaSize.Name = "grpPizzaSize";
             this.grpPizzaSize.Size = new System.Drawing.Size(129, 93);
             this.grpPizzaSize.TabIndex = 5;
@@ -401,14 +406,57 @@
             this.radSizeLarge.Text = "Large ($15.00)";
             this.radSizeLarge.UseVisualStyleBackColor = true;
             // 
+            // grpOrderInfo
+            // 
+            this.grpOrderInfo.Controls.Add(this.lblPizzaCount);
+            this.grpOrderInfo.Controls.Add(this.nudPizzaCount);
+            this.grpOrderInfo.Controls.Add(this.grpPizzaSize);
+            this.grpOrderInfo.Controls.Add(this.grpToppings);
+            this.grpOrderInfo.Location = new System.Drawing.Point(317, 79);
+            this.grpOrderInfo.Name = "grpOrderInfo";
+            this.grpOrderInfo.Size = new System.Drawing.Size(168, 408);
+            this.grpOrderInfo.TabIndex = 6;
+            this.grpOrderInfo.TabStop = false;
+            this.grpOrderInfo.Text = "Order Information";
+            // 
+            // nudPizzaCount
+            // 
+            this.nudPizzaCount.Location = new System.Drawing.Point(104, 376);
+            this.nudPizzaCount.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudPizzaCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudPizzaCount.Name = "nudPizzaCount";
+            this.nudPizzaCount.Size = new System.Drawing.Size(47, 20);
+            this.nudPizzaCount.TabIndex = 6;
+            this.nudPizzaCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblPizzaCount
+            // 
+            this.lblPizzaCount.AutoSize = true;
+            this.lblPizzaCount.Location = new System.Drawing.Point(19, 378);
+            this.lblPizzaCount.Name = "lblPizzaCount";
+            this.lblPizzaCount.Size = new System.Drawing.Size(46, 13);
+            this.lblPizzaCount.TabIndex = 7;
+            this.lblPizzaCount.Text = "Quantity";
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(1172, 591);
-            this.Controls.Add(this.grpPizzaSize);
-            this.Controls.Add(this.grpToppings);
+            this.Controls.Add(this.grpOrderInfo);
             this.Controls.Add(this.lblCurrentDateTime);
             this.Controls.Add(this.lblParlorName);
             this.Controls.Add(this.picTropicalLogo);
@@ -422,6 +470,9 @@
             this.grpToppings.PerformLayout();
             this.grpPizzaSize.ResumeLayout(false);
             this.grpPizzaSize.PerformLayout();
+            this.grpOrderInfo.ResumeLayout(false);
+            this.grpOrderInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPizzaCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,6 +513,9 @@
         private System.Windows.Forms.RadioButton radSizeLarge;
         private System.Windows.Forms.RadioButton radSizeMedium;
         private System.Windows.Forms.RadioButton radSizeSmall;
+        private System.Windows.Forms.GroupBox grpOrderInfo;
+        private System.Windows.Forms.Label lblPizzaCount;
+        private System.Windows.Forms.NumericUpDown nudPizzaCount;
     }
 }
 
