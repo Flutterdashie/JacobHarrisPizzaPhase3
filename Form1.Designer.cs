@@ -46,8 +46,20 @@
             this.picTropicalLogo = new System.Windows.Forms.PictureBox();
             this.lblParlorName = new System.Windows.Forms.Label();
             this.lblCurrentDateTime = new System.Windows.Forms.Label();
+            this.grpToppings = new System.Windows.Forms.GroupBox();
+            this.chkToppingCheese = new System.Windows.Forms.CheckBox();
+            this.chkToppingPepperoni = new System.Windows.Forms.CheckBox();
+            this.chkToppingHam = new System.Windows.Forms.CheckBox();
+            this.chkToppingSausage = new System.Windows.Forms.CheckBox();
+            this.chkToppingAnchovy = new System.Windows.Forms.CheckBox();
+            this.chkToppingPepper = new System.Windows.Forms.CheckBox();
+            this.chkToppingChicken = new System.Windows.Forms.CheckBox();
+            this.chkToppingMushroom = new System.Windows.Forms.CheckBox();
+            this.chkToppingOlive = new System.Windows.Forms.CheckBox();
+            this.chkToppingPineapple = new System.Windows.Forms.CheckBox();
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
+            this.grpToppings.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpCustomerData
@@ -220,12 +232,132 @@
             this.lblCurrentDateTime.TabIndex = 3;
             this.lblCurrentDateTime.Text = "Placeholder Date";
             // 
+            // grpToppings
+            // 
+            this.grpToppings.Controls.Add(this.chkToppingPineapple);
+            this.grpToppings.Controls.Add(this.chkToppingOlive);
+            this.grpToppings.Controls.Add(this.chkToppingMushroom);
+            this.grpToppings.Controls.Add(this.chkToppingChicken);
+            this.grpToppings.Controls.Add(this.chkToppingPepper);
+            this.grpToppings.Controls.Add(this.chkToppingAnchovy);
+            this.grpToppings.Controls.Add(this.chkToppingSausage);
+            this.grpToppings.Controls.Add(this.chkToppingHam);
+            this.grpToppings.Controls.Add(this.chkToppingPepperoni);
+            this.grpToppings.Controls.Add(this.chkToppingCheese);
+            this.grpToppings.Location = new System.Drawing.Point(460, 106);
+            this.grpToppings.Name = "grpToppings";
+            this.grpToppings.Size = new System.Drawing.Size(129, 255);
+            this.grpToppings.TabIndex = 4;
+            this.grpToppings.TabStop = false;
+            this.grpToppings.Text = "Toppings";
+            // 
+            // chkToppingCheese
+            // 
+            this.chkToppingCheese.AutoSize = true;
+            this.chkToppingCheese.Location = new System.Drawing.Point(21, 20);
+            this.chkToppingCheese.Name = "chkToppingCheese";
+            this.chkToppingCheese.Size = new System.Drawing.Size(62, 17);
+            this.chkToppingCheese.TabIndex = 0;
+            this.chkToppingCheese.Text = "Cheese";
+            this.chkToppingCheese.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingPepperoni
+            // 
+            this.chkToppingPepperoni.AutoSize = true;
+            this.chkToppingPepperoni.Location = new System.Drawing.Point(21, 44);
+            this.chkToppingPepperoni.Name = "chkToppingPepperoni";
+            this.chkToppingPepperoni.Size = new System.Drawing.Size(74, 17);
+            this.chkToppingPepperoni.TabIndex = 1;
+            this.chkToppingPepperoni.Text = "Pepperoni";
+            this.chkToppingPepperoni.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingHam
+            // 
+            this.chkToppingHam.AutoSize = true;
+            this.chkToppingHam.Location = new System.Drawing.Point(21, 67);
+            this.chkToppingHam.Name = "chkToppingHam";
+            this.chkToppingHam.Size = new System.Drawing.Size(48, 17);
+            this.chkToppingHam.TabIndex = 2;
+            this.chkToppingHam.Text = "Ham";
+            this.chkToppingHam.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingSausage
+            // 
+            this.chkToppingSausage.AutoSize = true;
+            this.chkToppingSausage.Location = new System.Drawing.Point(21, 91);
+            this.chkToppingSausage.Name = "chkToppingSausage";
+            this.chkToppingSausage.Size = new System.Drawing.Size(68, 17);
+            this.chkToppingSausage.TabIndex = 3;
+            this.chkToppingSausage.Text = "Sausage";
+            this.chkToppingSausage.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingAnchovy
+            // 
+            this.chkToppingAnchovy.AutoSize = true;
+            this.chkToppingAnchovy.Location = new System.Drawing.Point(21, 115);
+            this.chkToppingAnchovy.Name = "chkToppingAnchovy";
+            this.chkToppingAnchovy.Size = new System.Drawing.Size(76, 17);
+            this.chkToppingAnchovy.TabIndex = 4;
+            this.chkToppingAnchovy.Text = "Anchovies";
+            this.chkToppingAnchovy.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingPepper
+            // 
+            this.chkToppingPepper.AutoSize = true;
+            this.chkToppingPepper.Location = new System.Drawing.Point(21, 139);
+            this.chkToppingPepper.Name = "chkToppingPepper";
+            this.chkToppingPepper.Size = new System.Drawing.Size(97, 17);
+            this.chkToppingPepper.TabIndex = 5;
+            this.chkToppingPepper.Text = "Sliced Peppers";
+            this.chkToppingPepper.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingChicken
+            // 
+            this.chkToppingChicken.AutoSize = true;
+            this.chkToppingChicken.Location = new System.Drawing.Point(21, 163);
+            this.chkToppingChicken.Name = "chkToppingChicken";
+            this.chkToppingChicken.Size = new System.Drawing.Size(65, 17);
+            this.chkToppingChicken.TabIndex = 6;
+            this.chkToppingChicken.Text = "Chicken";
+            this.chkToppingChicken.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingMushroom
+            // 
+            this.chkToppingMushroom.AutoSize = true;
+            this.chkToppingMushroom.Location = new System.Drawing.Point(21, 187);
+            this.chkToppingMushroom.Name = "chkToppingMushroom";
+            this.chkToppingMushroom.Size = new System.Drawing.Size(80, 17);
+            this.chkToppingMushroom.TabIndex = 7;
+            this.chkToppingMushroom.Text = "Mushrooms";
+            this.chkToppingMushroom.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingOlive
+            // 
+            this.chkToppingOlive.AutoSize = true;
+            this.chkToppingOlive.Location = new System.Drawing.Point(21, 211);
+            this.chkToppingOlive.Name = "chkToppingOlive";
+            this.chkToppingOlive.Size = new System.Drawing.Size(87, 17);
+            this.chkToppingOlive.TabIndex = 8;
+            this.chkToppingOlive.Text = "Green Olives";
+            this.chkToppingOlive.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingPineapple
+            // 
+            this.chkToppingPineapple.AutoSize = true;
+            this.chkToppingPineapple.Location = new System.Drawing.Point(21, 235);
+            this.chkToppingPineapple.Name = "chkToppingPineapple";
+            this.chkToppingPineapple.Size = new System.Drawing.Size(73, 17);
+            this.chkToppingPineapple.TabIndex = 9;
+            this.chkToppingPineapple.Text = "Pineapple";
+            this.chkToppingPineapple.UseVisualStyleBackColor = true;
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(1172, 591);
+            this.Controls.Add(this.grpToppings);
             this.Controls.Add(this.lblCurrentDateTime);
             this.Controls.Add(this.lblParlorName);
             this.Controls.Add(this.picTropicalLogo);
@@ -235,6 +367,8 @@
             this.grpCustomerData.ResumeLayout(false);
             this.grpCustomerData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).EndInit();
+            this.grpToppings.ResumeLayout(false);
+            this.grpToppings.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,6 +394,17 @@
         private System.Windows.Forms.PictureBox picTropicalLogo;
         private System.Windows.Forms.Label lblParlorName;
         private System.Windows.Forms.Label lblCurrentDateTime;
+        private System.Windows.Forms.GroupBox grpToppings;
+        private System.Windows.Forms.CheckBox chkToppingPepperoni;
+        private System.Windows.Forms.CheckBox chkToppingCheese;
+        private System.Windows.Forms.CheckBox chkToppingAnchovy;
+        private System.Windows.Forms.CheckBox chkToppingSausage;
+        private System.Windows.Forms.CheckBox chkToppingHam;
+        private System.Windows.Forms.CheckBox chkToppingOlive;
+        private System.Windows.Forms.CheckBox chkToppingMushroom;
+        private System.Windows.Forms.CheckBox chkToppingChicken;
+        private System.Windows.Forms.CheckBox chkToppingPepper;
+        private System.Windows.Forms.CheckBox chkToppingPineapple;
     }
 }
 
