@@ -21,5 +21,10 @@ namespace JacobHarrisPizzaPhase1
         {
             lblCurrentDateTime.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
