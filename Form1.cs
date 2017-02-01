@@ -16,5 +16,10 @@ namespace JacobHarrisPizzaPhase1
         {
             InitializeComponent();
         }
+
+        private void tmrDateTimeSource_Tick(object sender, EventArgs e)
+        {
+            lblCurrentDateTime.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
+        }
     }
 }

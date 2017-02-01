@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpCustomerData = new System.Windows.Forms.GroupBox();
             this.txtCustZipCode = new System.Windows.Forms.MaskedTextBox();
             this.cboCustCity = new System.Windows.Forms.ComboBox();
@@ -81,6 +82,7 @@
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnPrice = new System.Windows.Forms.Button();
+            this.tmrDateTimeSource = new System.Windows.Forms.Timer(this.components);
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.grpToppings.SuspendLayout();
@@ -257,11 +259,12 @@
             // lblCurrentDateTime
             // 
             this.lblCurrentDateTime.AutoSize = true;
-            this.lblCurrentDateTime.Location = new System.Drawing.Point(536, 38);
+            this.lblCurrentDateTime.Location = new System.Drawing.Point(436, 38);
             this.lblCurrentDateTime.Name = "lblCurrentDateTime";
-            this.lblCurrentDateTime.Size = new System.Drawing.Size(89, 13);
+            this.lblCurrentDateTime.Size = new System.Drawing.Size(115, 13);
             this.lblCurrentDateTime.TabIndex = 5;
-            this.lblCurrentDateTime.Text = "Placeholder Date";
+            this.lblCurrentDateTime.Text = "Loading Date & Time...";
+            this.lblCurrentDateTime.UseMnemonic = false;
             // 
             // grpToppings
             // 
@@ -651,6 +654,12 @@
             this.btnPrice.Text = "&Price";
             this.btnPrice.UseVisualStyleBackColor = true;
             // 
+            // tmrDateTimeSource
+            // 
+            this.tmrDateTimeSource.Enabled = true;
+            this.tmrDateTimeSource.Interval = 1000;
+            this.tmrDateTimeSource.Tick += new System.EventHandler(this.tmrDateTimeSource_Tick);
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -739,6 +748,7 @@
         private System.Windows.Forms.Button btnPrice;
         private System.Windows.Forms.Label lblOrderNumValue;
         private System.Windows.Forms.Label lblOrderNumText;
+        private System.Windows.Forms.Timer tmrDateTimeSource;
     }
 }
 
