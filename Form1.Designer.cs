@@ -29,58 +29,58 @@
         private void InitializeComponent()
         {
             this.grpCustomerData = new System.Windows.Forms.GroupBox();
-            this.txtCustPhone = new System.Windows.Forms.MaskedTextBox();
-            this.lblCustPhone = new System.Windows.Forms.Label();
-            this.txtCustName = new System.Windows.Forms.TextBox();
-            this.lblCustName = new System.Windows.Forms.Label();
-            this.lblCustAddress1 = new System.Windows.Forms.Label();
-            this.lblCustAddress2 = new System.Windows.Forms.Label();
-            this.lblCustCity = new System.Windows.Forms.Label();
-            this.lblCustState = new System.Windows.Forms.Label();
-            this.lblCustZipCode = new System.Windows.Forms.Label();
-            this.txtCustAddress1 = new System.Windows.Forms.TextBox();
-            this.txtCustAddress2 = new System.Windows.Forms.TextBox();
-            this.txtCustCity = new System.Windows.Forms.TextBox();
-            this.cboCustCity = new System.Windows.Forms.ComboBox();
             this.txtCustZipCode = new System.Windows.Forms.MaskedTextBox();
+            this.cboCustCity = new System.Windows.Forms.ComboBox();
+            this.txtCustCity = new System.Windows.Forms.TextBox();
+            this.txtCustAddress2 = new System.Windows.Forms.TextBox();
+            this.txtCustAddress1 = new System.Windows.Forms.TextBox();
+            this.lblCustZipCode = new System.Windows.Forms.Label();
+            this.lblCustState = new System.Windows.Forms.Label();
+            this.lblCustCity = new System.Windows.Forms.Label();
+            this.lblCustAddress2 = new System.Windows.Forms.Label();
+            this.lblCustAddress1 = new System.Windows.Forms.Label();
+            this.lblCustName = new System.Windows.Forms.Label();
+            this.txtCustName = new System.Windows.Forms.TextBox();
+            this.lblCustPhone = new System.Windows.Forms.Label();
+            this.txtCustPhone = new System.Windows.Forms.MaskedTextBox();
             this.picTropicalLogo = new System.Windows.Forms.PictureBox();
             this.lblParlorName = new System.Windows.Forms.Label();
             this.lblCurrentDateTime = new System.Windows.Forms.Label();
             this.grpToppings = new System.Windows.Forms.GroupBox();
-            this.chkToppingCheese = new System.Windows.Forms.CheckBox();
-            this.chkToppingPepperoni = new System.Windows.Forms.CheckBox();
-            this.chkToppingHam = new System.Windows.Forms.CheckBox();
-            this.chkToppingSausage = new System.Windows.Forms.CheckBox();
-            this.chkToppingAnchovy = new System.Windows.Forms.CheckBox();
-            this.chkToppingPepper = new System.Windows.Forms.CheckBox();
-            this.chkToppingChicken = new System.Windows.Forms.CheckBox();
-            this.chkToppingMushroom = new System.Windows.Forms.CheckBox();
-            this.chkToppingOlive = new System.Windows.Forms.CheckBox();
             this.chkToppingPineapple = new System.Windows.Forms.CheckBox();
+            this.chkToppingOlive = new System.Windows.Forms.CheckBox();
+            this.chkToppingMushroom = new System.Windows.Forms.CheckBox();
+            this.chkToppingChicken = new System.Windows.Forms.CheckBox();
+            this.chkToppingPepper = new System.Windows.Forms.CheckBox();
+            this.chkToppingAnchovy = new System.Windows.Forms.CheckBox();
+            this.chkToppingSausage = new System.Windows.Forms.CheckBox();
+            this.chkToppingHam = new System.Windows.Forms.CheckBox();
+            this.chkToppingPepperoni = new System.Windows.Forms.CheckBox();
+            this.chkToppingCheese = new System.Windows.Forms.CheckBox();
             this.grpPizzaSize = new System.Windows.Forms.GroupBox();
-            this.radSizeSmall = new System.Windows.Forms.RadioButton();
-            this.radSizeMedium = new System.Windows.Forms.RadioButton();
             this.radSizeLarge = new System.Windows.Forms.RadioButton();
+            this.radSizeMedium = new System.Windows.Forms.RadioButton();
+            this.radSizeSmall = new System.Windows.Forms.RadioButton();
             this.grpOrderInfo = new System.Windows.Forms.GroupBox();
-            this.nudPizzaCount = new System.Windows.Forms.NumericUpDown();
-            this.lblPizzaCount = new System.Windows.Forms.Label();
-            this.grpPaymentInfo = new System.Windows.Forms.GroupBox();
-            this.cboPaymentMethod = new System.Windows.Forms.ComboBox();
-            this.lblPaymentMethod = new System.Windows.Forms.Label();
-            this.lblMaxPizzas = new System.Windows.Forms.Label();
-            this.lblSubtotalText = new System.Windows.Forms.Label();
-            this.lblTaxText = new System.Windows.Forms.Label();
-            this.lblTotalText = new System.Windows.Forms.Label();
-            this.lblSubtotalValue = new System.Windows.Forms.Label();
-            this.lblTaxValue = new System.Windows.Forms.Label();
-            this.lblTotalValue = new System.Windows.Forms.Label();
-            this.grpFormActions = new System.Windows.Forms.GroupBox();
-            this.btnPrice = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.lblOrderNumText = new System.Windows.Forms.Label();
             this.lblOrderNumValue = new System.Windows.Forms.Label();
+            this.lblOrderNumText = new System.Windows.Forms.Label();
+            this.lblMaxPizzas = new System.Windows.Forms.Label();
+            this.lblPizzaCount = new System.Windows.Forms.Label();
+            this.nudPizzaCount = new System.Windows.Forms.NumericUpDown();
+            this.grpPaymentInfo = new System.Windows.Forms.GroupBox();
+            this.lblTotalValue = new System.Windows.Forms.Label();
+            this.lblTaxValue = new System.Windows.Forms.Label();
+            this.lblSubtotalValue = new System.Windows.Forms.Label();
+            this.lblTotalText = new System.Windows.Forms.Label();
+            this.lblTaxText = new System.Windows.Forms.Label();
+            this.lblPaymentMethod = new System.Windows.Forms.Label();
+            this.lblSubtotalText = new System.Windows.Forms.Label();
+            this.cboPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.grpFormActions = new System.Windows.Forms.GroupBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnPrice = new System.Windows.Forms.Button();
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.grpToppings.SuspendLayout();
@@ -114,66 +114,54 @@
             this.grpCustomerData.TabStop = false;
             this.grpCustomerData.Text = "Customer Information";
             // 
-            // txtCustPhone
+            // txtCustZipCode
             // 
-            this.txtCustPhone.Location = new System.Drawing.Point(110, 58);
-            this.txtCustPhone.Mask = "(999) 000-0000";
-            this.txtCustPhone.Name = "txtCustPhone";
-            this.txtCustPhone.Size = new System.Drawing.Size(82, 20);
-            this.txtCustPhone.TabIndex = 3;
+            this.txtCustZipCode.Location = new System.Drawing.Point(110, 242);
+            this.txtCustZipCode.Mask = "00000-9999";
+            this.txtCustZipCode.Name = "txtCustZipCode";
+            this.txtCustZipCode.Size = new System.Drawing.Size(65, 20);
+            this.txtCustZipCode.TabIndex = 13;
             // 
-            // lblCustPhone
+            // cboCustCity
             // 
-            this.lblCustPhone.AutoSize = true;
-            this.lblCustPhone.Location = new System.Drawing.Point(12, 61);
-            this.lblCustPhone.Name = "lblCustPhone";
-            this.lblCustPhone.Size = new System.Drawing.Size(78, 13);
-            this.lblCustPhone.TabIndex = 2;
-            this.lblCustPhone.Text = "Phone Number";
+            this.cboCustCity.FormattingEnabled = true;
+            this.cboCustCity.Location = new System.Drawing.Point(110, 206);
+            this.cboCustCity.Name = "cboCustCity";
+            this.cboCustCity.Size = new System.Drawing.Size(46, 21);
+            this.cboCustCity.TabIndex = 11;
             // 
-            // txtCustName
+            // txtCustCity
             // 
-            this.txtCustName.Location = new System.Drawing.Point(110, 21);
-            this.txtCustName.MaxLength = 25;
-            this.txtCustName.Name = "txtCustName";
-            this.txtCustName.Size = new System.Drawing.Size(162, 20);
-            this.txtCustName.TabIndex = 1;
+            this.txtCustCity.Location = new System.Drawing.Point(110, 169);
+            this.txtCustCity.MaxLength = 25;
+            this.txtCustCity.Name = "txtCustCity";
+            this.txtCustCity.Size = new System.Drawing.Size(177, 20);
+            this.txtCustCity.TabIndex = 9;
             // 
-            // lblCustName
+            // txtCustAddress2
             // 
-            this.lblCustName.AutoSize = true;
-            this.lblCustName.Location = new System.Drawing.Point(12, 24);
-            this.lblCustName.Name = "lblCustName";
-            this.lblCustName.Size = new System.Drawing.Size(35, 13);
-            this.lblCustName.TabIndex = 0;
-            this.lblCustName.Text = "Name";
+            this.txtCustAddress2.Location = new System.Drawing.Point(110, 132);
+            this.txtCustAddress2.MaxLength = 25;
+            this.txtCustAddress2.Name = "txtCustAddress2";
+            this.txtCustAddress2.Size = new System.Drawing.Size(177, 20);
+            this.txtCustAddress2.TabIndex = 7;
             // 
-            // lblCustAddress1
+            // txtCustAddress1
             // 
-            this.lblCustAddress1.AutoSize = true;
-            this.lblCustAddress1.Location = new System.Drawing.Point(12, 98);
-            this.lblCustAddress1.Name = "lblCustAddress1";
-            this.lblCustAddress1.Size = new System.Drawing.Size(77, 13);
-            this.lblCustAddress1.TabIndex = 4;
-            this.lblCustAddress1.Text = "Address Line 1";
+            this.txtCustAddress1.Location = new System.Drawing.Point(110, 95);
+            this.txtCustAddress1.MaxLength = 25;
+            this.txtCustAddress1.Name = "txtCustAddress1";
+            this.txtCustAddress1.Size = new System.Drawing.Size(177, 20);
+            this.txtCustAddress1.TabIndex = 5;
             // 
-            // lblCustAddress2
+            // lblCustZipCode
             // 
-            this.lblCustAddress2.AutoSize = true;
-            this.lblCustAddress2.Location = new System.Drawing.Point(12, 135);
-            this.lblCustAddress2.Name = "lblCustAddress2";
-            this.lblCustAddress2.Size = new System.Drawing.Size(77, 13);
-            this.lblCustAddress2.TabIndex = 6;
-            this.lblCustAddress2.Text = "Address Line 2";
-            // 
-            // lblCustCity
-            // 
-            this.lblCustCity.AutoSize = true;
-            this.lblCustCity.Location = new System.Drawing.Point(12, 172);
-            this.lblCustCity.Name = "lblCustCity";
-            this.lblCustCity.Size = new System.Drawing.Size(24, 13);
-            this.lblCustCity.TabIndex = 8;
-            this.lblCustCity.Text = "City";
+            this.lblCustZipCode.AutoSize = true;
+            this.lblCustZipCode.Location = new System.Drawing.Point(12, 245);
+            this.lblCustZipCode.Name = "lblCustZipCode";
+            this.lblCustZipCode.Size = new System.Drawing.Size(50, 13);
+            this.lblCustZipCode.TabIndex = 12;
+            this.lblCustZipCode.Text = "&Zip Code";
             // 
             // lblCustState
             // 
@@ -184,54 +172,66 @@
             this.lblCustState.TabIndex = 10;
             this.lblCustState.Text = "State";
             // 
-            // lblCustZipCode
+            // lblCustCity
             // 
-            this.lblCustZipCode.AutoSize = true;
-            this.lblCustZipCode.Location = new System.Drawing.Point(12, 245);
-            this.lblCustZipCode.Name = "lblCustZipCode";
-            this.lblCustZipCode.Size = new System.Drawing.Size(50, 13);
-            this.lblCustZipCode.TabIndex = 12;
-            this.lblCustZipCode.Text = "Zip Code";
+            this.lblCustCity.AutoSize = true;
+            this.lblCustCity.Location = new System.Drawing.Point(12, 172);
+            this.lblCustCity.Name = "lblCustCity";
+            this.lblCustCity.Size = new System.Drawing.Size(24, 13);
+            this.lblCustCity.TabIndex = 8;
+            this.lblCustCity.Text = "City";
             // 
-            // txtCustAddress1
+            // lblCustAddress2
             // 
-            this.txtCustAddress1.Location = new System.Drawing.Point(110, 95);
-            this.txtCustAddress1.MaxLength = 25;
-            this.txtCustAddress1.Name = "txtCustAddress1";
-            this.txtCustAddress1.Size = new System.Drawing.Size(177, 20);
-            this.txtCustAddress1.TabIndex = 5;
+            this.lblCustAddress2.AutoSize = true;
+            this.lblCustAddress2.Location = new System.Drawing.Point(12, 135);
+            this.lblCustAddress2.Name = "lblCustAddress2";
+            this.lblCustAddress2.Size = new System.Drawing.Size(77, 13);
+            this.lblCustAddress2.TabIndex = 6;
+            this.lblCustAddress2.Text = "Address Line 2";
             // 
-            // txtCustAddress2
+            // lblCustAddress1
             // 
-            this.txtCustAddress2.Location = new System.Drawing.Point(110, 132);
-            this.txtCustAddress2.MaxLength = 25;
-            this.txtCustAddress2.Name = "txtCustAddress2";
-            this.txtCustAddress2.Size = new System.Drawing.Size(177, 20);
-            this.txtCustAddress2.TabIndex = 7;
+            this.lblCustAddress1.AutoSize = true;
+            this.lblCustAddress1.Location = new System.Drawing.Point(12, 98);
+            this.lblCustAddress1.Name = "lblCustAddress1";
+            this.lblCustAddress1.Size = new System.Drawing.Size(77, 13);
+            this.lblCustAddress1.TabIndex = 4;
+            this.lblCustAddress1.Text = "Address Line 1";
             // 
-            // txtCustCity
+            // lblCustName
             // 
-            this.txtCustCity.Location = new System.Drawing.Point(110, 169);
-            this.txtCustCity.MaxLength = 25;
-            this.txtCustCity.Name = "txtCustCity";
-            this.txtCustCity.Size = new System.Drawing.Size(177, 20);
-            this.txtCustCity.TabIndex = 9;
+            this.lblCustName.AutoSize = true;
+            this.lblCustName.Location = new System.Drawing.Point(12, 24);
+            this.lblCustName.Name = "lblCustName";
+            this.lblCustName.Size = new System.Drawing.Size(35, 13);
+            this.lblCustName.TabIndex = 0;
+            this.lblCustName.Text = "&Name";
             // 
-            // cboCustCity
+            // txtCustName
             // 
-            this.cboCustCity.FormattingEnabled = true;
-            this.cboCustCity.Location = new System.Drawing.Point(110, 206);
-            this.cboCustCity.Name = "cboCustCity";
-            this.cboCustCity.Size = new System.Drawing.Size(46, 21);
-            this.cboCustCity.TabIndex = 11;
+            this.txtCustName.Location = new System.Drawing.Point(110, 21);
+            this.txtCustName.MaxLength = 25;
+            this.txtCustName.Name = "txtCustName";
+            this.txtCustName.Size = new System.Drawing.Size(162, 20);
+            this.txtCustName.TabIndex = 1;
             // 
-            // txtCustZipCode
+            // lblCustPhone
             // 
-            this.txtCustZipCode.Location = new System.Drawing.Point(110, 242);
-            this.txtCustZipCode.Mask = "00000-9999";
-            this.txtCustZipCode.Name = "txtCustZipCode";
-            this.txtCustZipCode.Size = new System.Drawing.Size(65, 20);
-            this.txtCustZipCode.TabIndex = 13;
+            this.lblCustPhone.AutoSize = true;
+            this.lblCustPhone.Location = new System.Drawing.Point(12, 61);
+            this.lblCustPhone.Name = "lblCustPhone";
+            this.lblCustPhone.Size = new System.Drawing.Size(78, 13);
+            this.lblCustPhone.TabIndex = 2;
+            this.lblCustPhone.Text = "Phone Number";
+            // 
+            // txtCustPhone
+            // 
+            this.txtCustPhone.Location = new System.Drawing.Point(110, 58);
+            this.txtCustPhone.Mask = "(999) 000-0000";
+            this.txtCustPhone.Name = "txtCustPhone";
+            this.txtCustPhone.Size = new System.Drawing.Size(82, 20);
+            this.txtCustPhone.TabIndex = 3;
             // 
             // picTropicalLogo
             // 
@@ -280,87 +280,17 @@
             this.grpToppings.Size = new System.Drawing.Size(129, 255);
             this.grpToppings.TabIndex = 2;
             this.grpToppings.TabStop = false;
-            this.grpToppings.Text = "Toppings";
+            this.grpToppings.Text = "&Toppings";
             // 
-            // chkToppingCheese
+            // chkToppingPineapple
             // 
-            this.chkToppingCheese.AutoSize = true;
-            this.chkToppingCheese.Location = new System.Drawing.Point(21, 20);
-            this.chkToppingCheese.Name = "chkToppingCheese";
-            this.chkToppingCheese.Size = new System.Drawing.Size(62, 17);
-            this.chkToppingCheese.TabIndex = 0;
-            this.chkToppingCheese.Text = "Cheese";
-            this.chkToppingCheese.UseVisualStyleBackColor = true;
-            // 
-            // chkToppingPepperoni
-            // 
-            this.chkToppingPepperoni.AutoSize = true;
-            this.chkToppingPepperoni.Location = new System.Drawing.Point(21, 44);
-            this.chkToppingPepperoni.Name = "chkToppingPepperoni";
-            this.chkToppingPepperoni.Size = new System.Drawing.Size(74, 17);
-            this.chkToppingPepperoni.TabIndex = 1;
-            this.chkToppingPepperoni.Text = "Pepperoni";
-            this.chkToppingPepperoni.UseVisualStyleBackColor = true;
-            // 
-            // chkToppingHam
-            // 
-            this.chkToppingHam.AutoSize = true;
-            this.chkToppingHam.Location = new System.Drawing.Point(21, 67);
-            this.chkToppingHam.Name = "chkToppingHam";
-            this.chkToppingHam.Size = new System.Drawing.Size(48, 17);
-            this.chkToppingHam.TabIndex = 2;
-            this.chkToppingHam.Text = "Ham";
-            this.chkToppingHam.UseVisualStyleBackColor = true;
-            // 
-            // chkToppingSausage
-            // 
-            this.chkToppingSausage.AutoSize = true;
-            this.chkToppingSausage.Location = new System.Drawing.Point(21, 91);
-            this.chkToppingSausage.Name = "chkToppingSausage";
-            this.chkToppingSausage.Size = new System.Drawing.Size(68, 17);
-            this.chkToppingSausage.TabIndex = 3;
-            this.chkToppingSausage.Text = "Sausage";
-            this.chkToppingSausage.UseVisualStyleBackColor = true;
-            // 
-            // chkToppingAnchovy
-            // 
-            this.chkToppingAnchovy.AutoSize = true;
-            this.chkToppingAnchovy.Location = new System.Drawing.Point(21, 115);
-            this.chkToppingAnchovy.Name = "chkToppingAnchovy";
-            this.chkToppingAnchovy.Size = new System.Drawing.Size(76, 17);
-            this.chkToppingAnchovy.TabIndex = 4;
-            this.chkToppingAnchovy.Text = "Anchovies";
-            this.chkToppingAnchovy.UseVisualStyleBackColor = true;
-            // 
-            // chkToppingPepper
-            // 
-            this.chkToppingPepper.AutoSize = true;
-            this.chkToppingPepper.Location = new System.Drawing.Point(21, 139);
-            this.chkToppingPepper.Name = "chkToppingPepper";
-            this.chkToppingPepper.Size = new System.Drawing.Size(97, 17);
-            this.chkToppingPepper.TabIndex = 5;
-            this.chkToppingPepper.Text = "Sliced Peppers";
-            this.chkToppingPepper.UseVisualStyleBackColor = true;
-            // 
-            // chkToppingChicken
-            // 
-            this.chkToppingChicken.AutoSize = true;
-            this.chkToppingChicken.Location = new System.Drawing.Point(21, 163);
-            this.chkToppingChicken.Name = "chkToppingChicken";
-            this.chkToppingChicken.Size = new System.Drawing.Size(65, 17);
-            this.chkToppingChicken.TabIndex = 6;
-            this.chkToppingChicken.Text = "Chicken";
-            this.chkToppingChicken.UseVisualStyleBackColor = true;
-            // 
-            // chkToppingMushroom
-            // 
-            this.chkToppingMushroom.AutoSize = true;
-            this.chkToppingMushroom.Location = new System.Drawing.Point(21, 187);
-            this.chkToppingMushroom.Name = "chkToppingMushroom";
-            this.chkToppingMushroom.Size = new System.Drawing.Size(80, 17);
-            this.chkToppingMushroom.TabIndex = 7;
-            this.chkToppingMushroom.Text = "Mushrooms";
-            this.chkToppingMushroom.UseVisualStyleBackColor = true;
+            this.chkToppingPineapple.AutoSize = true;
+            this.chkToppingPineapple.Location = new System.Drawing.Point(21, 235);
+            this.chkToppingPineapple.Name = "chkToppingPineapple";
+            this.chkToppingPineapple.Size = new System.Drawing.Size(73, 17);
+            this.chkToppingPineapple.TabIndex = 9;
+            this.chkToppingPineapple.Text = "Pineapple";
+            this.chkToppingPineapple.UseVisualStyleBackColor = true;
             // 
             // chkToppingOlive
             // 
@@ -372,15 +302,85 @@
             this.chkToppingOlive.Text = "Green Olives";
             this.chkToppingOlive.UseVisualStyleBackColor = true;
             // 
-            // chkToppingPineapple
+            // chkToppingMushroom
             // 
-            this.chkToppingPineapple.AutoSize = true;
-            this.chkToppingPineapple.Location = new System.Drawing.Point(21, 235);
-            this.chkToppingPineapple.Name = "chkToppingPineapple";
-            this.chkToppingPineapple.Size = new System.Drawing.Size(73, 17);
-            this.chkToppingPineapple.TabIndex = 9;
-            this.chkToppingPineapple.Text = "Pineapple";
-            this.chkToppingPineapple.UseVisualStyleBackColor = true;
+            this.chkToppingMushroom.AutoSize = true;
+            this.chkToppingMushroom.Location = new System.Drawing.Point(21, 187);
+            this.chkToppingMushroom.Name = "chkToppingMushroom";
+            this.chkToppingMushroom.Size = new System.Drawing.Size(80, 17);
+            this.chkToppingMushroom.TabIndex = 7;
+            this.chkToppingMushroom.Text = "Mushrooms";
+            this.chkToppingMushroom.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingChicken
+            // 
+            this.chkToppingChicken.AutoSize = true;
+            this.chkToppingChicken.Location = new System.Drawing.Point(21, 163);
+            this.chkToppingChicken.Name = "chkToppingChicken";
+            this.chkToppingChicken.Size = new System.Drawing.Size(65, 17);
+            this.chkToppingChicken.TabIndex = 6;
+            this.chkToppingChicken.Text = "Chicken";
+            this.chkToppingChicken.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingPepper
+            // 
+            this.chkToppingPepper.AutoSize = true;
+            this.chkToppingPepper.Location = new System.Drawing.Point(21, 139);
+            this.chkToppingPepper.Name = "chkToppingPepper";
+            this.chkToppingPepper.Size = new System.Drawing.Size(97, 17);
+            this.chkToppingPepper.TabIndex = 5;
+            this.chkToppingPepper.Text = "Sliced Peppers";
+            this.chkToppingPepper.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingAnchovy
+            // 
+            this.chkToppingAnchovy.AutoSize = true;
+            this.chkToppingAnchovy.Location = new System.Drawing.Point(21, 115);
+            this.chkToppingAnchovy.Name = "chkToppingAnchovy";
+            this.chkToppingAnchovy.Size = new System.Drawing.Size(76, 17);
+            this.chkToppingAnchovy.TabIndex = 4;
+            this.chkToppingAnchovy.Text = "Anchovies";
+            this.chkToppingAnchovy.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingSausage
+            // 
+            this.chkToppingSausage.AutoSize = true;
+            this.chkToppingSausage.Location = new System.Drawing.Point(21, 91);
+            this.chkToppingSausage.Name = "chkToppingSausage";
+            this.chkToppingSausage.Size = new System.Drawing.Size(68, 17);
+            this.chkToppingSausage.TabIndex = 3;
+            this.chkToppingSausage.Text = "Sausage";
+            this.chkToppingSausage.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingHam
+            // 
+            this.chkToppingHam.AutoSize = true;
+            this.chkToppingHam.Location = new System.Drawing.Point(21, 67);
+            this.chkToppingHam.Name = "chkToppingHam";
+            this.chkToppingHam.Size = new System.Drawing.Size(48, 17);
+            this.chkToppingHam.TabIndex = 2;
+            this.chkToppingHam.Text = "Ham";
+            this.chkToppingHam.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingPepperoni
+            // 
+            this.chkToppingPepperoni.AutoSize = true;
+            this.chkToppingPepperoni.Location = new System.Drawing.Point(21, 44);
+            this.chkToppingPepperoni.Name = "chkToppingPepperoni";
+            this.chkToppingPepperoni.Size = new System.Drawing.Size(74, 17);
+            this.chkToppingPepperoni.TabIndex = 1;
+            this.chkToppingPepperoni.Text = "Pepperoni";
+            this.chkToppingPepperoni.UseVisualStyleBackColor = true;
+            // 
+            // chkToppingCheese
+            // 
+            this.chkToppingCheese.AutoSize = true;
+            this.chkToppingCheese.Location = new System.Drawing.Point(21, 20);
+            this.chkToppingCheese.Name = "chkToppingCheese";
+            this.chkToppingCheese.Size = new System.Drawing.Size(62, 17);
+            this.chkToppingCheese.TabIndex = 0;
+            this.chkToppingCheese.Text = "Cheese";
+            this.chkToppingCheese.UseVisualStyleBackColor = true;
             // 
             // grpPizzaSize
             // 
@@ -394,16 +394,16 @@
             this.grpPizzaSize.TabStop = false;
             this.grpPizzaSize.Text = "Size";
             // 
-            // radSizeSmall
+            // radSizeLarge
             // 
-            this.radSizeSmall.AutoSize = true;
-            this.radSizeSmall.Location = new System.Drawing.Point(7, 20);
-            this.radSizeSmall.Name = "radSizeSmall";
-            this.radSizeSmall.Size = new System.Drawing.Size(86, 17);
-            this.radSizeSmall.TabIndex = 0;
-            this.radSizeSmall.TabStop = true;
-            this.radSizeSmall.Text = "Small ($9.00)";
-            this.radSizeSmall.UseVisualStyleBackColor = true;
+            this.radSizeLarge.AutoSize = true;
+            this.radSizeLarge.Location = new System.Drawing.Point(7, 68);
+            this.radSizeLarge.Name = "radSizeLarge";
+            this.radSizeLarge.Size = new System.Drawing.Size(94, 17);
+            this.radSizeLarge.TabIndex = 2;
+            this.radSizeLarge.TabStop = true;
+            this.radSizeLarge.Text = "Large ($15.00)";
+            this.radSizeLarge.UseVisualStyleBackColor = true;
             // 
             // radSizeMedium
             // 
@@ -416,16 +416,16 @@
             this.radSizeMedium.Text = "Medium ($12.00)";
             this.radSizeMedium.UseVisualStyleBackColor = true;
             // 
-            // radSizeLarge
+            // radSizeSmall
             // 
-            this.radSizeLarge.AutoSize = true;
-            this.radSizeLarge.Location = new System.Drawing.Point(7, 68);
-            this.radSizeLarge.Name = "radSizeLarge";
-            this.radSizeLarge.Size = new System.Drawing.Size(94, 17);
-            this.radSizeLarge.TabIndex = 2;
-            this.radSizeLarge.TabStop = true;
-            this.radSizeLarge.Text = "Large ($15.00)";
-            this.radSizeLarge.UseVisualStyleBackColor = true;
+            this.radSizeSmall.AutoSize = true;
+            this.radSizeSmall.Location = new System.Drawing.Point(7, 20);
+            this.radSizeSmall.Name = "radSizeSmall";
+            this.radSizeSmall.Size = new System.Drawing.Size(86, 17);
+            this.radSizeSmall.TabIndex = 0;
+            this.radSizeSmall.TabStop = true;
+            this.radSizeSmall.Text = "Small ($9.00)";
+            this.radSizeSmall.UseVisualStyleBackColor = true;
             // 
             // grpOrderInfo
             // 
@@ -442,6 +442,42 @@
             this.grpOrderInfo.TabIndex = 3;
             this.grpOrderInfo.TabStop = false;
             this.grpOrderInfo.Text = "Order Information";
+            // 
+            // lblOrderNumValue
+            // 
+            this.lblOrderNumValue.AutoSize = true;
+            this.lblOrderNumValue.Location = new System.Drawing.Point(103, 34);
+            this.lblOrderNumValue.Name = "lblOrderNumValue";
+            this.lblOrderNumValue.Size = new System.Drawing.Size(31, 13);
+            this.lblOrderNumValue.TabIndex = 1;
+            this.lblOrderNumValue.Text = "0000";
+            // 
+            // lblOrderNumText
+            // 
+            this.lblOrderNumText.AutoSize = true;
+            this.lblOrderNumText.Location = new System.Drawing.Point(6, 34);
+            this.lblOrderNumText.Name = "lblOrderNumText";
+            this.lblOrderNumText.Size = new System.Drawing.Size(76, 13);
+            this.lblOrderNumText.TabIndex = 0;
+            this.lblOrderNumText.Text = "Order Number:";
+            // 
+            // lblMaxPizzas
+            // 
+            this.lblMaxPizzas.AutoSize = true;
+            this.lblMaxPizzas.Location = new System.Drawing.Point(106, 430);
+            this.lblMaxPizzas.Name = "lblMaxPizzas";
+            this.lblMaxPizzas.Size = new System.Drawing.Size(48, 13);
+            this.lblMaxPizzas.TabIndex = 6;
+            this.lblMaxPizzas.Text = "(Max 10)";
+            // 
+            // lblPizzaCount
+            // 
+            this.lblPizzaCount.AutoSize = true;
+            this.lblPizzaCount.Location = new System.Drawing.Point(17, 430);
+            this.lblPizzaCount.Name = "lblPizzaCount";
+            this.lblPizzaCount.Size = new System.Drawing.Size(46, 13);
+            this.lblPizzaCount.TabIndex = 4;
+            this.lblPizzaCount.Text = "&Quantity";
             // 
             // nudPizzaCount
             // 
@@ -465,15 +501,6 @@
             0,
             0});
             // 
-            // lblPizzaCount
-            // 
-            this.lblPizzaCount.AutoSize = true;
-            this.lblPizzaCount.Location = new System.Drawing.Point(17, 430);
-            this.lblPizzaCount.Name = "lblPizzaCount";
-            this.lblPizzaCount.Size = new System.Drawing.Size(46, 13);
-            this.lblPizzaCount.TabIndex = 4;
-            this.lblPizzaCount.Text = "Quantity";
-            // 
             // grpPaymentInfo
             // 
             this.grpPaymentInfo.Controls.Add(this.lblTotalValue);
@@ -491,6 +518,74 @@
             this.grpPaymentInfo.TabStop = false;
             this.grpPaymentInfo.Text = "Payment and Pricing";
             // 
+            // lblTotalValue
+            // 
+            this.lblTotalValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTotalValue.AutoSize = true;
+            this.lblTotalValue.Location = new System.Drawing.Point(217, 113);
+            this.lblTotalValue.Name = "lblTotalValue";
+            this.lblTotalValue.Size = new System.Drawing.Size(34, 13);
+            this.lblTotalValue.TabIndex = 7;
+            this.lblTotalValue.Text = "$0.00";
+            // 
+            // lblTaxValue
+            // 
+            this.lblTaxValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTaxValue.AutoSize = true;
+            this.lblTaxValue.Location = new System.Drawing.Point(217, 77);
+            this.lblTaxValue.Name = "lblTaxValue";
+            this.lblTaxValue.Size = new System.Drawing.Size(34, 13);
+            this.lblTaxValue.TabIndex = 5;
+            this.lblTaxValue.Text = "$0.00";
+            // 
+            // lblSubtotalValue
+            // 
+            this.lblSubtotalValue.AutoSize = true;
+            this.lblSubtotalValue.Location = new System.Drawing.Point(217, 41);
+            this.lblSubtotalValue.Name = "lblSubtotalValue";
+            this.lblSubtotalValue.Size = new System.Drawing.Size(34, 13);
+            this.lblSubtotalValue.TabIndex = 3;
+            this.lblSubtotalValue.Text = "$0.00";
+            // 
+            // lblTotalText
+            // 
+            this.lblTotalText.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTotalText.AutoSize = true;
+            this.lblTotalText.Location = new System.Drawing.Point(143, 113);
+            this.lblTotalText.Name = "lblTotalText";
+            this.lblTotalText.Size = new System.Drawing.Size(34, 13);
+            this.lblTotalText.TabIndex = 6;
+            this.lblTotalText.Text = "Total:";
+            // 
+            // lblTaxText
+            // 
+            this.lblTaxText.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTaxText.AutoSize = true;
+            this.lblTaxText.Location = new System.Drawing.Point(143, 77);
+            this.lblTaxText.Name = "lblTaxText";
+            this.lblTaxText.Size = new System.Drawing.Size(28, 13);
+            this.lblTaxText.TabIndex = 4;
+            this.lblTaxText.Text = "Tax:";
+            // 
+            // lblPaymentMethod
+            // 
+            this.lblPaymentMethod.AutoSize = true;
+            this.lblPaymentMethod.Location = new System.Drawing.Point(12, 33);
+            this.lblPaymentMethod.Name = "lblPaymentMethod";
+            this.lblPaymentMethod.Size = new System.Drawing.Size(87, 13);
+            this.lblPaymentMethod.TabIndex = 0;
+            this.lblPaymentMethod.Text = "Payment Method";
+            // 
+            // lblSubtotalText
+            // 
+            this.lblSubtotalText.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSubtotalText.AutoSize = true;
+            this.lblSubtotalText.Location = new System.Drawing.Point(143, 41);
+            this.lblSubtotalText.Name = "lblSubtotalText";
+            this.lblSubtotalText.Size = new System.Drawing.Size(49, 13);
+            this.lblSubtotalText.TabIndex = 2;
+            this.lblSubtotalText.Text = "Subtotal:";
+            // 
             // cboPaymentMethod
             // 
             this.cboPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -506,83 +601,6 @@
             this.cboPaymentMethod.Size = new System.Drawing.Size(121, 21);
             this.cboPaymentMethod.TabIndex = 1;
             // 
-            // lblPaymentMethod
-            // 
-            this.lblPaymentMethod.AutoSize = true;
-            this.lblPaymentMethod.Location = new System.Drawing.Point(12, 33);
-            this.lblPaymentMethod.Name = "lblPaymentMethod";
-            this.lblPaymentMethod.Size = new System.Drawing.Size(87, 13);
-            this.lblPaymentMethod.TabIndex = 0;
-            this.lblPaymentMethod.Text = "Payment Method";
-            // 
-            // lblMaxPizzas
-            // 
-            this.lblMaxPizzas.AutoSize = true;
-            this.lblMaxPizzas.Location = new System.Drawing.Point(106, 430);
-            this.lblMaxPizzas.Name = "lblMaxPizzas";
-            this.lblMaxPizzas.Size = new System.Drawing.Size(48, 13);
-            this.lblMaxPizzas.TabIndex = 6;
-            this.lblMaxPizzas.Text = "(Max 10)";
-            // 
-            // lblSubtotalText
-            // 
-            this.lblSubtotalText.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSubtotalText.AutoSize = true;
-            this.lblSubtotalText.Location = new System.Drawing.Point(143, 41);
-            this.lblSubtotalText.Name = "lblSubtotalText";
-            this.lblSubtotalText.Size = new System.Drawing.Size(49, 13);
-            this.lblSubtotalText.TabIndex = 2;
-            this.lblSubtotalText.Text = "Subtotal:";
-            // 
-            // lblTaxText
-            // 
-            this.lblTaxText.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTaxText.AutoSize = true;
-            this.lblTaxText.Location = new System.Drawing.Point(143, 77);
-            this.lblTaxText.Name = "lblTaxText";
-            this.lblTaxText.Size = new System.Drawing.Size(28, 13);
-            this.lblTaxText.TabIndex = 4;
-            this.lblTaxText.Text = "Tax:";
-            // 
-            // lblTotalText
-            // 
-            this.lblTotalText.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTotalText.AutoSize = true;
-            this.lblTotalText.Location = new System.Drawing.Point(143, 113);
-            this.lblTotalText.Name = "lblTotalText";
-            this.lblTotalText.Size = new System.Drawing.Size(34, 13);
-            this.lblTotalText.TabIndex = 6;
-            this.lblTotalText.Text = "Total:";
-            // 
-            // lblSubtotalValue
-            // 
-            this.lblSubtotalValue.AutoSize = true;
-            this.lblSubtotalValue.Location = new System.Drawing.Point(217, 41);
-            this.lblSubtotalValue.Name = "lblSubtotalValue";
-            this.lblSubtotalValue.Size = new System.Drawing.Size(34, 13);
-            this.lblSubtotalValue.TabIndex = 3;
-            this.lblSubtotalValue.Text = "$0.00";
-            // 
-            // lblTaxValue
-            // 
-            this.lblTaxValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTaxValue.AutoSize = true;
-            this.lblTaxValue.Location = new System.Drawing.Point(217, 77);
-            this.lblTaxValue.Name = "lblTaxValue";
-            this.lblTaxValue.Size = new System.Drawing.Size(34, 13);
-            this.lblTaxValue.TabIndex = 5;
-            this.lblTaxValue.Text = "$0.00";
-            // 
-            // lblTotalValue
-            // 
-            this.lblTotalValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTotalValue.AutoSize = true;
-            this.lblTotalValue.Location = new System.Drawing.Point(217, 113);
-            this.lblTotalValue.Name = "lblTotalValue";
-            this.lblTotalValue.Size = new System.Drawing.Size(34, 13);
-            this.lblTotalValue.TabIndex = 7;
-            this.lblTotalValue.Text = "$0.00";
-            // 
             // grpFormActions
             // 
             this.grpFormActions.Controls.Add(this.btnClose);
@@ -596,33 +614,6 @@
             this.grpFormActions.TabStop = false;
             this.grpFormActions.Text = "Actions";
             // 
-            // btnPrice
-            // 
-            this.btnPrice.Location = new System.Drawing.Point(11, 24);
-            this.btnPrice.Name = "btnPrice";
-            this.btnPrice.Size = new System.Drawing.Size(96, 71);
-            this.btnPrice.TabIndex = 0;
-            this.btnPrice.Text = "Price";
-            this.btnPrice.UseVisualStyleBackColor = true;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(11, 142);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(96, 71);
-            this.btnReset.TabIndex = 1;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            // 
-            // btnAccept
-            // 
-            this.btnAccept.Location = new System.Drawing.Point(11, 260);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(96, 71);
-            this.btnAccept.TabIndex = 2;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            // 
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -630,26 +621,35 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(96, 71);
             this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // lblOrderNumText
+            // btnAccept
             // 
-            this.lblOrderNumText.AutoSize = true;
-            this.lblOrderNumText.Location = new System.Drawing.Point(6, 34);
-            this.lblOrderNumText.Name = "lblOrderNumText";
-            this.lblOrderNumText.Size = new System.Drawing.Size(76, 13);
-            this.lblOrderNumText.TabIndex = 0;
-            this.lblOrderNumText.Text = "Order Number:";
+            this.btnAccept.Location = new System.Drawing.Point(11, 260);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(96, 71);
+            this.btnAccept.TabIndex = 2;
+            this.btnAccept.Text = "&Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
             // 
-            // lblOrderNumValue
+            // btnReset
             // 
-            this.lblOrderNumValue.AutoSize = true;
-            this.lblOrderNumValue.Location = new System.Drawing.Point(103, 34);
-            this.lblOrderNumValue.Name = "lblOrderNumValue";
-            this.lblOrderNumValue.Size = new System.Drawing.Size(31, 13);
-            this.lblOrderNumValue.TabIndex = 1;
-            this.lblOrderNumValue.Text = "0000";
+            this.btnReset.Location = new System.Drawing.Point(11, 142);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(96, 71);
+            this.btnReset.TabIndex = 1;
+            this.btnReset.Text = "&Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            // 
+            // btnPrice
+            // 
+            this.btnPrice.Location = new System.Drawing.Point(11, 24);
+            this.btnPrice.Name = "btnPrice";
+            this.btnPrice.Size = new System.Drawing.Size(96, 71);
+            this.btnPrice.TabIndex = 0;
+            this.btnPrice.Text = "&Price";
+            this.btnPrice.UseVisualStyleBackColor = true;
             // 
             // frmPizzaOrder
             // 
