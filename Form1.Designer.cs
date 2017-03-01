@@ -422,6 +422,7 @@
             // radSizeSmall
             // 
             this.radSizeSmall.AutoSize = true;
+            this.radSizeSmall.Checked = true;
             this.radSizeSmall.Location = new System.Drawing.Point(7, 20);
             this.radSizeSmall.Name = "radSizeSmall";
             this.radSizeSmall.Size = new System.Drawing.Size(86, 17);

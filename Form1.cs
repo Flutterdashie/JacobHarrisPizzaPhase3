@@ -32,7 +32,28 @@ namespace JacobHarrisPizzaPhase1
             txtCustAddress2.ResetText();
             txtCustCity.ResetText();
             txtCustZipCode.ResetText();
-            
+
+            //Reset combo/numeric up/dn
+            cboCustState.ResetText(); //TODO: Fix this
+            cboPaymentMethod.ResetText(); //TODO: Fix this
+            nudPizzaCount.Value = nudPizzaCount.Minimum;
+
+            //Reset Checkboxes
+            chkToppingAnchovy.Checked = false;
+            chkToppingCheese.Checked = false;
+            chkToppingChicken.Checked = false;
+            chkToppingHam.Checked = false;
+            chkToppingMushroom.Checked = false;
+            chkToppingOlive.Checked = false;
+            chkToppingPepper.Checked = false;
+            chkToppingPepperoni.Checked = false;
+            chkToppingPineapple.Checked = false;
+            chkToppingSausage.Checked = false;
+
+            //Reset Radio buttons (default is small)
+            radSizeLarge.Checked = false;
+            radSizeMedium.Checked = false;
+            radSizeSmall.Checked = true;
         }
     }
 }
