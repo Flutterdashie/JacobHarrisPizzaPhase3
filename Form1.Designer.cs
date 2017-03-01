@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.grpCustomerData = new System.Windows.Forms.GroupBox();
             this.txtCustZipCode = new System.Windows.Forms.MaskedTextBox();
-            this.cboCustCity = new System.Windows.Forms.ComboBox();
+            this.cboCustState = new System.Windows.Forms.ComboBox();
             this.txtCustCity = new System.Windows.Forms.TextBox();
             this.txtCustAddress2 = new System.Windows.Forms.TextBox();
             this.txtCustAddress1 = new System.Windows.Forms.TextBox();
@@ -96,7 +96,7 @@
             // grpCustomerData
             // 
             this.grpCustomerData.Controls.Add(this.txtCustZipCode);
-            this.grpCustomerData.Controls.Add(this.cboCustCity);
+            this.grpCustomerData.Controls.Add(this.cboCustState);
             this.grpCustomerData.Controls.Add(this.txtCustCity);
             this.grpCustomerData.Controls.Add(this.txtCustAddress2);
             this.grpCustomerData.Controls.Add(this.txtCustAddress1);
@@ -124,13 +124,13 @@
             this.txtCustZipCode.Size = new System.Drawing.Size(65, 20);
             this.txtCustZipCode.TabIndex = 13;
             // 
-            // cboCustCity
+            // cboCustState
             // 
-            this.cboCustCity.FormattingEnabled = true;
-            this.cboCustCity.Location = new System.Drawing.Point(110, 206);
-            this.cboCustCity.Name = "cboCustCity";
-            this.cboCustCity.Size = new System.Drawing.Size(46, 21);
-            this.cboCustCity.TabIndex = 11;
+            this.cboCustState.FormattingEnabled = true;
+            this.cboCustState.Location = new System.Drawing.Point(110, 206);
+            this.cboCustState.Name = "cboCustState";
+            this.cboCustState.Size = new System.Drawing.Size(46, 21);
+            this.cboCustState.TabIndex = 11;
             // 
             // txtCustCity
             // 
@@ -708,7 +708,7 @@
         private System.Windows.Forms.Label lblCustState;
         private System.Windows.Forms.TextBox txtCustAddress2;
         private System.Windows.Forms.TextBox txtCustAddress1;
-        private System.Windows.Forms.ComboBox cboCustCity;
+        private System.Windows.Forms.ComboBox cboCustState;
         private System.Windows.Forms.TextBox txtCustCity;
         private System.Windows.Forms.MaskedTextBox txtCustZipCode;
         private System.Windows.Forms.PictureBox picTropicalLogo;

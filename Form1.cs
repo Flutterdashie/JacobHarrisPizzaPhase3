@@ -24,7 +24,8 @@ namespace JacobHarrisPizzaPhase1
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            
+            //It feels so clunky to do it this way, I'm gonna revise this as soon as I can.
+
         }
     }
 }
