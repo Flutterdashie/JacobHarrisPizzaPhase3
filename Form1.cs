@@ -25,7 +25,14 @@ namespace JacobHarrisPizzaPhase1
         private void btnReset_Click(object sender, EventArgs e)
         {
             //It feels so clunky to do it this way, I'm gonna revise this as soon as I can.
-
+            //Empty all text boxes first
+            txtCustPhone.ResetText();
+            txtCustName.ResetText();
+            txtCustAddress1.ResetText();
+            txtCustAddress2.ResetText();
+            txtCustCity.ResetText();
+            txtCustZipCode.ResetText();
+            
         }
     }
 }
