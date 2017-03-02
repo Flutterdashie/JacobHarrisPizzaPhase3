@@ -60,5 +60,10 @@ namespace JacobHarrisPizzaPhase1
         {
             resetForm();
         }
+
+        private void frmPizzaOrder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
