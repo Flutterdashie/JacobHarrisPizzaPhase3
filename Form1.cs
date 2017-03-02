@@ -17,12 +17,7 @@ namespace JacobHarrisPizzaPhase1
             InitializeComponent();
         }
 
-        private void tmrDateTimeSource_Tick(object sender, EventArgs e)
-        {
-            lblCurrentDateTime.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
+        private void resetForm()
         {
             //It feels so clunky to do it this way, I'm gonna revise this as soon as I can.
             //Empty all text boxes first
@@ -54,6 +49,16 @@ namespace JacobHarrisPizzaPhase1
             radSizeLarge.Checked = false;
             radSizeMedium.Checked = false;
             radSizeSmall.Checked = true;
+        }
+
+        private void tmrDateTimeSource_Tick(object sender, EventArgs e)
+        {
+            lblCurrentDateTime.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            resetForm();
         }
     }
 }
