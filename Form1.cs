@@ -13,6 +13,7 @@ namespace JacobHarrisPizzaPhase1
     public partial class frmPizzaOrder : Form
     {
         const decimal SALES_TAX_RATE = 0.07M;
+        int currentOrderNum;
         public frmPizzaOrder()
         {
             InitializeComponent();
@@ -80,6 +81,7 @@ namespace JacobHarrisPizzaPhase1
         }
         private void resetForm()
         {
+            lblOrderNumValue.Text = String.Format("{0:0000}", currentOrderNum);
             //It feels so clunky to do it this way, I'm gonna revise this as soon as I can.
             //Empty all text boxes first
             txtCustPhone.ResetText();
@@ -112,15 +114,6 @@ namespace JacobHarrisPizzaPhase1
             radSizeSmall.Checked = true;
         }
 
-        private bool isValid()
-        {
-            int numInputsInvalid = 0;
-
-
-
-
-            return (numInputsInvalid == 0);
-        }
 
         private void tmrDateTimeSource_Tick(object sender, EventArgs e)
         {
@@ -134,12 +127,14 @@ namespace JacobHarrisPizzaPhase1
 
         private void frmPizzaOrder_Load(object sender, EventArgs e)
         {
-
+            currentOrderNum = 0;
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
+
             //TODO: Add a way of accepting the order.
+            currentOrderNum++;
             resetForm();
             
         }
