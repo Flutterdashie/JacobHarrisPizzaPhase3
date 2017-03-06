@@ -636,6 +636,7 @@
             this.btnAccept.TabIndex = 2;
             this.btnAccept.Text = "&Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnReset
             // 
@@ -655,6 +656,7 @@
             this.btnPrice.TabIndex = 0;
             this.btnPrice.Text = "&Price";
             this.btnPrice.UseVisualStyleBackColor = true;
+            this.btnPrice.Click += new System.EventHandler(this.btnPrice_Click);
             // 
             // tmrDateTimeSource
             // 
