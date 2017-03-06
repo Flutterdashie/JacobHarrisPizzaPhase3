@@ -112,6 +112,16 @@ namespace JacobHarrisPizzaPhase1
             radSizeSmall.Checked = true;
         }
 
+        private bool isValid()
+        {
+            int numInputsInvalid = 0;
+
+
+
+
+            return (numInputsInvalid == 0);
+        }
+
         private void tmrDateTimeSource_Tick(object sender, EventArgs e)
         {
             lblCurrentDateTime.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
