@@ -81,6 +81,7 @@ namespace JacobHarrisPizzaPhase1
         }
         private void resetForm()
         {
+            btnAccept.Enabled = false;
             lblOrderNumValue.Text = String.Format("{0:0000}", currentOrderNum);
             //It feels so clunky to do it this way, I'm gonna revise this as soon as I can.
             //Empty all text boxes first
@@ -149,6 +150,54 @@ namespace JacobHarrisPizzaPhase1
             lblTaxValue.Text = String.Format("{0:C}", currentSalesTax);
             lblTotalValue.Text = String.Format("{0:C}", currentPrice);
             
+        }
+
+        private void txtCustName_Validating(object sender, CancelEventArgs e)
+        {
+            if ((txtCustName.TextLength < 5) || (txtCustName.TextLength > 25))
+            {
+                e.Cancel = true;
+                btnAccept.Enabled = false;
+                erpValidationChecker.SetError(txtCustName, "Must be 5 - 25 characters");
+            }
+            else
+            {
+                e.Cancel = false;
+                btnAccept.Enabled = true;
+                erpValidationChecker.SetError(txtCustName, string.Empty);
+            }
+        }
+
+        private void txtCustPhone_Validating(object sender, CancelEventArgs e)
+        {
+            if ((txtCustPhone.Text.Length < 10) || (txtCustPhone.Text.Contains(" ")))
+            {
+                e.Cancel = true;
+                btnAccept.Enabled = false;
+                erpValidationChecker.SetError(txtCustPhone, "Must be 10 digits");
+            }
+            else
+            {
+                e.Cancel = false;
+                btnAccept.Enabled = true;
+                erpValidationChecker.SetError(txtCustPhone, string.Empty);
+            }
+        }
+
+        private void txtCustZipCode_Validating(object sender, CancelEventArgs e)
+        {
+            if ((txtCustZipCode.Text.Length % 4 != 1) || (txtCustZipCode.Text.Contains(" ")))
+            {
+                e.Cancel = true;
+                btnAccept.Enabled = false;
+                erpValidationChecker.SetError(txtCustZipCode, "Must be 5 or 9 digits");
+            }
+            else
+            {
+                e.Cancel = false;
+                btnAccept.Enabled = true;
+                erpValidationChecker.SetError(txtCustZipCode, string.Empty);
+            }
         }
     }
 }

@@ -83,6 +83,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnPrice = new System.Windows.Forms.Button();
             this.tmrDateTimeSource = new System.Windows.Forms.Timer(this.components);
+            this.erpValidationChecker = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.grpToppings.SuspendLayout();
@@ -91,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPizzaCount)).BeginInit();
             this.grpPaymentInfo.SuspendLayout();
             this.grpFormActions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpValidationChecker)).BeginInit();
             this.SuspendLayout();
             // 
             // grpCustomerData
@@ -118,11 +120,19 @@
             // 
             // txtCustZipCode
             // 
+            this.txtCustZipCode.BeepOnError = true;
+            this.txtCustZipCode.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.erpValidationChecker.SetIconPadding(this.txtCustZipCode, 10);
             this.txtCustZipCode.Location = new System.Drawing.Point(110, 242);
             this.txtCustZipCode.Mask = "00000-9999";
             this.txtCustZipCode.Name = "txtCustZipCode";
+            this.txtCustZipCode.ResetOnPrompt = false;
+            this.txtCustZipCode.ResetOnSpace = false;
             this.txtCustZipCode.Size = new System.Drawing.Size(65, 20);
+            this.txtCustZipCode.SkipLiterals = false;
             this.txtCustZipCode.TabIndex = 13;
+            this.txtCustZipCode.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCustZipCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustZipCode_Validating);
             // 
             // cboCustState
             // 
@@ -134,26 +144,29 @@
             // 
             // txtCustCity
             // 
+            this.erpValidationChecker.SetIconPadding(this.txtCustCity, 10);
             this.txtCustCity.Location = new System.Drawing.Point(110, 169);
             this.txtCustCity.MaxLength = 25;
             this.txtCustCity.Name = "txtCustCity";
-            this.txtCustCity.Size = new System.Drawing.Size(177, 20);
+            this.txtCustCity.Size = new System.Drawing.Size(154, 20);
             this.txtCustCity.TabIndex = 9;
             // 
             // txtCustAddress2
             // 
+            this.erpValidationChecker.SetIconPadding(this.txtCustAddress2, 10);
             this.txtCustAddress2.Location = new System.Drawing.Point(110, 132);
             this.txtCustAddress2.MaxLength = 25;
             this.txtCustAddress2.Name = "txtCustAddress2";
-            this.txtCustAddress2.Size = new System.Drawing.Size(177, 20);
+            this.txtCustAddress2.Size = new System.Drawing.Size(154, 20);
             this.txtCustAddress2.TabIndex = 7;
             // 
             // txtCustAddress1
             // 
+            this.erpValidationChecker.SetIconPadding(this.txtCustAddress1, 10);
             this.txtCustAddress1.Location = new System.Drawing.Point(110, 95);
             this.txtCustAddress1.MaxLength = 25;
             this.txtCustAddress1.Name = "txtCustAddress1";
-            this.txtCustAddress1.Size = new System.Drawing.Size(177, 20);
+            this.txtCustAddress1.Size = new System.Drawing.Size(154, 20);
             this.txtCustAddress1.TabIndex = 5;
             // 
             // lblCustZipCode
@@ -212,11 +225,13 @@
             // 
             // txtCustName
             // 
+            this.erpValidationChecker.SetIconPadding(this.txtCustName, 10);
             this.txtCustName.Location = new System.Drawing.Point(110, 21);
             this.txtCustName.MaxLength = 25;
             this.txtCustName.Name = "txtCustName";
-            this.txtCustName.Size = new System.Drawing.Size(162, 20);
+            this.txtCustName.Size = new System.Drawing.Size(154, 20);
             this.txtCustName.TabIndex = 1;
+            this.txtCustName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustName_Validating);
             // 
             // lblCustPhone
             // 
@@ -229,11 +244,19 @@
             // 
             // txtCustPhone
             // 
+            this.txtCustPhone.BeepOnError = true;
+            this.txtCustPhone.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.erpValidationChecker.SetIconPadding(this.txtCustPhone, 10);
             this.txtCustPhone.Location = new System.Drawing.Point(110, 58);
-            this.txtCustPhone.Mask = "(999) 000-0000";
+            this.txtCustPhone.Mask = "(000) 000-0000";
             this.txtCustPhone.Name = "txtCustPhone";
+            this.txtCustPhone.ResetOnPrompt = false;
+            this.txtCustPhone.ResetOnSpace = false;
             this.txtCustPhone.Size = new System.Drawing.Size(82, 20);
+            this.txtCustPhone.SkipLiterals = false;
             this.txtCustPhone.TabIndex = 3;
+            this.txtCustPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCustPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustPhone_Validating);
             // 
             // picTropicalLogo
             // 
@@ -664,6 +687,11 @@
             this.tmrDateTimeSource.Interval = 1000;
             this.tmrDateTimeSource.Tick += new System.EventHandler(this.tmrDateTimeSource_Tick);
             // 
+            // erpValidationChecker
+            // 
+            this.erpValidationChecker.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.erpValidationChecker.ContainerControl = this;
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -693,6 +721,7 @@
             this.grpPaymentInfo.ResumeLayout(false);
             this.grpPaymentInfo.PerformLayout();
             this.grpFormActions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.erpValidationChecker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -754,6 +783,7 @@
         private System.Windows.Forms.Label lblOrderNumValue;
         private System.Windows.Forms.Label lblOrderNumText;
         private System.Windows.Forms.Timer tmrDateTimeSource;
+        private System.Windows.Forms.ErrorProvider erpValidationChecker;
     }
 }
 
