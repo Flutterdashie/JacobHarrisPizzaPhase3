@@ -115,6 +115,27 @@ namespace JacobHarrisPizzaPhase1
             radSizeSmall.Checked = true;
         }
 
+        private void tryEnableAccept()
+        {
+            if (!String.IsNullOrEmpty(txtCustCity.Text))
+            {
+                if (!String.IsNullOrEmpty(txtCustAddress1.Text))
+                {
+                    if (!String.IsNullOrEmpty(txtCustName.Text))
+                    {
+                        if (!String.IsNullOrEmpty(txtCustPhone.Text))
+                        {
+                            if (!String.IsNullOrEmpty(txtCustZipCode.Text))
+                            {
+                                btnAccept.Enabled = true;
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+            btnAccept.Enabled = false;
+        }
 
         private void tmrDateTimeSource_Tick(object sender, EventArgs e)
         {
@@ -163,7 +184,7 @@ namespace JacobHarrisPizzaPhase1
             else
             {
                 e.Cancel = false;
-                btnAccept.Enabled = true;
+                tryEnableAccept();
                 erpValidationChecker.SetError(txtCustName, string.Empty);
             }
         }
@@ -179,7 +200,7 @@ namespace JacobHarrisPizzaPhase1
             else
             {
                 e.Cancel = false;
-                btnAccept.Enabled = true;
+                tryEnableAccept();
                 erpValidationChecker.SetError(txtCustPhone, string.Empty);
             }
         }
@@ -195,8 +216,24 @@ namespace JacobHarrisPizzaPhase1
             else
             {
                 e.Cancel = false;
-                btnAccept.Enabled = true;
+                tryEnableAccept();
                 erpValidationChecker.SetError(txtCustZipCode, string.Empty);
+            }
+        }
+
+        private void txtCustAddress1_Validating(object sender, CancelEventArgs e)
+        {
+            if ((txtCustAddress1.TextLength < 5) || (txtCustAddress1.TextLength > 25))
+            {
+                e.Cancel = true;
+                btnAccept.Enabled = false;
+                erpValidationChecker.SetError(txtCustAddress1, "Must be 5 - 25 characters");
+            }
+            else
+            {
+                e.Cancel = false;
+                tryEnableAccept();
+                erpValidationChecker.SetError(txtCustAddress1, string.Empty);
             }
         }
     }

@@ -168,6 +168,7 @@
             this.txtCustAddress1.Name = "txtCustAddress1";
             this.txtCustAddress1.Size = new System.Drawing.Size(154, 20);
             this.txtCustAddress1.TabIndex = 5;
+            this.txtCustAddress1.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustAddress1_Validating);
             // 
             // lblCustZipCode
             // 
