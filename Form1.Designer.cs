@@ -150,6 +150,7 @@
             this.txtCustCity.Name = "txtCustCity";
             this.txtCustCity.Size = new System.Drawing.Size(154, 20);
             this.txtCustCity.TabIndex = 9;
+            this.txtCustCity.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustCity_Validating);
             // 
             // txtCustAddress2
             // 

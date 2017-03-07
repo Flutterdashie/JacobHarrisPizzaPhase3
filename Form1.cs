@@ -127,6 +127,7 @@ namespace JacobHarrisPizzaPhase1
                         {
                             if (!String.IsNullOrEmpty(txtCustZipCode.Text))
                             {
+                                erpValidationChecker.SetError(btnAccept, string.Empty);
                                 btnAccept.Enabled = true;
                                 return;
                             }
@@ -134,6 +135,7 @@ namespace JacobHarrisPizzaPhase1
                     }
                 }
             }
+            erpValidationChecker.SetError(btnAccept, "All required customer fields must be valid and not empty");
             btnAccept.Enabled = false;
         }
 
@@ -150,6 +152,7 @@ namespace JacobHarrisPizzaPhase1
         private void frmPizzaOrder_Load(object sender, EventArgs e)
         {
             currentOrderNum = 0;
+            tryEnableAccept();
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -234,6 +237,22 @@ namespace JacobHarrisPizzaPhase1
                 e.Cancel = false;
                 tryEnableAccept();
                 erpValidationChecker.SetError(txtCustAddress1, string.Empty);
+            }
+        }
+
+        private void txtCustCity_Validating(object sender, CancelEventArgs e)
+        {
+            if ((txtCustCity.TextLength < 2) || (txtCustCity.TextLength > 25))
+            {
+                e.Cancel = true;
+                btnAccept.Enabled = false;
+                erpValidationChecker.SetError(txtCustCity, "Must be 2 - 25 characters");
+            }
+            else
+            {
+                e.Cancel = false;
+                tryEnableAccept();
+                erpValidationChecker.SetError(txtCustCity, string.Empty);
             }
         }
     }
