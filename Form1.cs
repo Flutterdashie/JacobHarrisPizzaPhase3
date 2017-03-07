@@ -184,22 +184,30 @@ namespace JacobHarrisPizzaPhase1
         private void btnAccept_Click(object sender, EventArgs e)
         {
 
-            //TODO: Add a way of accepting the order.
+            Customer curCust = new Customer(txtCustPhone.Text, txtCustName.Text, txtCustAddress1.Text, txtCustAddress2.Text, txtCustCity.Text, cboCustState.SelectedText, txtCustZipCode.Text);
+            FileStream logStream = new FileStream(Application.StartupPath + "\\log.txt", FileMode.Append, FileAccess.Write);
+            StreamWriter logWriter = new StreamWriter(logStream);
+            calcPrice();
+            logWriter.WriteLine(lblOrderNumValue.Text + "," + curCust.Phone + "," + curCust.Name + "," + lblTotalValue.Text);
+            logWriter.Close();
             currentOrderNum++;
             resetForm();
-            
+            ValidateChildren();
         }
-
-        private void btnPrice_Click(object sender, EventArgs e)
+        private void calcPrice()
         {
             decimal currentSubtotal = getPizzaSubtotal();
             decimal currentSalesTax = currentSubtotal * SALES_TAX_RATE;
             decimal currentPrice = currentSubtotal + currentSalesTax;
-            lblSubtotalValue.Text = String.Format("{0:C}", currentSubtotal); 
+            lblSubtotalValue.Text = String.Format("{0:C}", currentSubtotal);
             //Found online, but I understand how it works: {0:C} represents that the number should be treated as a currency value (2 decimal places and add the currency symbol)
             lblTaxValue.Text = String.Format("{0:C}", currentSalesTax);
             lblTotalValue.Text = String.Format("{0:C}", currentPrice);
-            
+
+        }
+        private void btnPrice_Click(object sender, EventArgs e)
+        {
+            calcPrice();
         }
 
         private void txtCustName_Validating(object sender, CancelEventArgs e)
