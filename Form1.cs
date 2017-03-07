@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,7 +94,7 @@ namespace JacobHarrisPizzaPhase1
             txtCustZipCode.ResetText();
 
             //Reset combo/numeric up/dn
-            cboCustState.ResetText(); //TODO: Fix this
+            cboCustState.SelectedIndex = 23;
             cboPaymentMethod.SelectedItem = cboPaymentMethod.Items[0];
             nudPizzaCount.Value = nudPizzaCount.Minimum;
 
@@ -113,6 +114,28 @@ namespace JacobHarrisPizzaPhase1
             radSizeLarge.Checked = false;
             radSizeMedium.Checked = false;
             radSizeSmall.Checked = true;
+        }
+
+        private void populateStateBox()
+        {
+            string path = Path.GetDirectoryName(Path.GetDirectoryName(Application.StartupPath));
+            path += "\\Resources\\StateAbbrev.txt";
+            try
+            {
+                FileStream stateListFile = new FileStream(path, FileMode.Open, FileAccess.Read);
+                StreamReader stateReader = new StreamReader(stateListFile);
+                while (stateReader.Peek() != -1)
+                {
+                    cboCustState.Items.Add(stateReader.ReadLine());
+                }
+                stateReader.Close();
+                
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("State List file not found");
+            }
+            
         }
 
         private void tryEnableAccept()
@@ -151,9 +174,11 @@ namespace JacobHarrisPizzaPhase1
 
         private void frmPizzaOrder_Load(object sender, EventArgs e)
         {
+            populateStateBox();
             ValidateChildren();
             currentOrderNum = 0;
             tryEnableAccept();
+            resetForm();
         }
 
         private void btnAccept_Click(object sender, EventArgs e)

@@ -84,7 +84,7 @@
     <None Include="Resources\PalmTree.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\StateAbbrev.txt" />
+    <EmbeddedResource Include="Resources\StateAbbrev.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
