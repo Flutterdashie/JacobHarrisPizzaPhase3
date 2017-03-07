@@ -645,13 +645,13 @@
             // 
             // btnClose
             // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Location = new System.Drawing.Point(11, 378);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(96, 71);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnAccept
             // 

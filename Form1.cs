@@ -151,6 +151,7 @@ namespace JacobHarrisPizzaPhase1
 
         private void frmPizzaOrder_Load(object sender, EventArgs e)
         {
+            ValidateChildren();
             currentOrderNum = 0;
             tryEnableAccept();
         }
@@ -180,13 +181,13 @@ namespace JacobHarrisPizzaPhase1
         {
             if ((txtCustName.TextLength < 5) || (txtCustName.TextLength > 25))
             {
-                e.Cancel = true;
+                
                 btnAccept.Enabled = false;
                 erpValidationChecker.SetError(txtCustName, "Must be 5 - 25 characters");
             }
             else
             {
-                e.Cancel = false;
+                
                 tryEnableAccept();
                 erpValidationChecker.SetError(txtCustName, string.Empty);
             }
@@ -196,13 +197,13 @@ namespace JacobHarrisPizzaPhase1
         {
             if ((txtCustPhone.Text.Length < 10) || (txtCustPhone.Text.Contains(" ")))
             {
-                e.Cancel = true;
+                
                 btnAccept.Enabled = false;
                 erpValidationChecker.SetError(txtCustPhone, "Must be 10 digits");
             }
             else
             {
-                e.Cancel = false;
+                
                 tryEnableAccept();
                 erpValidationChecker.SetError(txtCustPhone, string.Empty);
             }
@@ -212,13 +213,13 @@ namespace JacobHarrisPizzaPhase1
         {
             if ((txtCustZipCode.Text.Length % 4 != 1) || (txtCustZipCode.Text.Contains(" ")))
             {
-                e.Cancel = true;
+                
                 btnAccept.Enabled = false;
                 erpValidationChecker.SetError(txtCustZipCode, "Must be 5 or 9 digits");
             }
             else
             {
-                e.Cancel = false;
+                
                 tryEnableAccept();
                 erpValidationChecker.SetError(txtCustZipCode, string.Empty);
             }
@@ -228,13 +229,13 @@ namespace JacobHarrisPizzaPhase1
         {
             if ((txtCustAddress1.TextLength < 5) || (txtCustAddress1.TextLength > 25))
             {
-                e.Cancel = true;
+                
                 btnAccept.Enabled = false;
                 erpValidationChecker.SetError(txtCustAddress1, "Must be 5 - 25 characters");
             }
             else
             {
-                e.Cancel = false;
+                
                 tryEnableAccept();
                 erpValidationChecker.SetError(txtCustAddress1, string.Empty);
             }
@@ -244,15 +245,24 @@ namespace JacobHarrisPizzaPhase1
         {
             if ((txtCustCity.TextLength < 2) || (txtCustCity.TextLength > 25))
             {
-                e.Cancel = true;
+                
                 btnAccept.Enabled = false;
                 erpValidationChecker.SetError(txtCustCity, "Must be 2 - 25 characters");
             }
             else
             {
-                e.Cancel = false;
+                
                 tryEnableAccept();
                 erpValidationChecker.SetError(txtCustCity, string.Empty);
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            DialogResult exitDlgResult = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+            if (exitDlgResult == DialogResult.Yes)
+            {
+                this.Close();
             }
         }
     }
