@@ -37,46 +37,8 @@ namespace JacobHarrisPizzaPhase1
 
             //This is a huge mess right now, but in phase 3 I'm going to switch the checkboxes to a condensed form.
 
-            if (chkToppingAnchovy.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingCheese.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingChicken.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingHam.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingMushroom.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingOlive.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingPepper.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingPepperoni.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingPineapple.Checked)
-            {
-                subtotal += 1.00M;
-            }
-            if (chkToppingSausage.Checked)
-            {
-                subtotal += 1.00M;
-            }
+            subtotal += clbToppings.CheckedItems.Count;
+
             subtotal *= nudPizzaCount.Value;
             return subtotal;
         }
@@ -99,16 +61,7 @@ namespace JacobHarrisPizzaPhase1
             nudPizzaCount.Value = nudPizzaCount.Minimum;
 
             //Reset Checkboxes
-            chkToppingAnchovy.Checked = false;
-            chkToppingCheese.Checked = false;
-            chkToppingChicken.Checked = false;
-            chkToppingHam.Checked = false;
-            chkToppingMushroom.Checked = false;
-            chkToppingOlive.Checked = false;
-            chkToppingPepper.Checked = false;
-            chkToppingPepperoni.Checked = false;
-            chkToppingPineapple.Checked = false;
-            chkToppingSausage.Checked = false;
+            clbToppings.ClearSelected();
 
             //Reset Radio buttons (default is small)
             radSizeLarge.Checked = false;
