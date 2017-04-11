@@ -243,13 +243,17 @@ namespace JacobHarrisPizzaPhase1
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void getClosePrompt()
         {
             DialogResult exitDlgResult = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
             if (exitDlgResult == DialogResult.Yes)
             {
                 this.Close();
             }
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            getClosePrompt();
         }
     }
 }
