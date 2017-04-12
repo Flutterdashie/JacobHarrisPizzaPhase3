@@ -141,6 +141,7 @@
             this.txtCustCity.Name = "txtCustCity";
             this.txtCustCity.Size = new System.Drawing.Size(154, 20);
             this.txtCustCity.TabIndex = 9;
+            this.txtCustCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.forceCharOnly);
             this.txtCustCity.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustCity_Validating);
             // 
             // txtCustAddress2
@@ -224,6 +225,7 @@
             this.txtCustName.Name = "txtCustName";
             this.txtCustName.Size = new System.Drawing.Size(154, 20);
             this.txtCustName.TabIndex = 1;
+            this.txtCustName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.forceCharOnly);
             this.txtCustName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustName_Validating);
             // 
             // lblCustPhone

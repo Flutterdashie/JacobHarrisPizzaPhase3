@@ -341,5 +341,15 @@ namespace JacobHarrisPizzaPhase1
                 e.Cancel = true;
             }
         }
+        private void forceCharOnly(object sender, KeyPressEventArgs e)
+        {
+            char c;
+            c = e.KeyChar;
+            if (c >= 65 && c <= 90) ;
+            else if (c >= 97 && c <= 122) ;
+            else if (c == 8 || c == 32) ;
+            else
+                e.Handled = true;
+        }
     }
 }
