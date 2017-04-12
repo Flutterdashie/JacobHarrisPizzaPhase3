@@ -323,6 +323,7 @@
             this.clbToppings.TabIndex = 10;
             this.clbToppings.Click += new System.EventHandler(this.updatePriceTrigger);
             this.clbToppings.SelectedIndexChanged += new System.EventHandler(this.updatePriceTrigger);
+            this.clbToppings.KeyUp += new System.Windows.Forms.KeyEventHandler(this.clbToppings_KeyUp);
             // 
             // grpPizzaSize
             // 

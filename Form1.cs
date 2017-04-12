@@ -360,5 +360,10 @@ namespace JacobHarrisPizzaPhase1
         {
             calcPrice();
         }
+
+        private void clbToppings_KeyUp(object sender, KeyEventArgs e)
+        {
+            calcPrice();
+        }
     }
 }
