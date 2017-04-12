@@ -611,6 +611,7 @@
             this.Controls.Add(this.grpCustomerData);
             this.Name = "frmPizzaOrder";
             this.Text = "Tropical Pizza Order Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPizzaOrder_FormClosing);
             this.Load += new System.EventHandler(this.frmPizzaOrder_Load);
             this.grpCustomerData.ResumeLayout(false);
             this.grpCustomerData.PerformLayout();

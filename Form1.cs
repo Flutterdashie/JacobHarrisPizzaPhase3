@@ -315,17 +315,14 @@ namespace JacobHarrisPizzaPhase1
             }
         }
 
-        private void getClosePrompt()
+        private bool getClosePrompt()
         {
             DialogResult exitDlgResult = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-            if (exitDlgResult == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            return (exitDlgResult == DialogResult.Yes);
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            getClosePrompt();
+            this.Close();
         }
 
         private void txtCustPhone_TextChanged(object sender, EventArgs e)
@@ -334,6 +331,14 @@ namespace JacobHarrisPizzaPhase1
             if(erpValidationChecker.GetError(txtCustPhone) == String.Empty)
             {
                 CustSearch();
+            }
+        }
+
+        private void frmPizzaOrder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!getClosePrompt())
+            {
+                e.Cancel = true;
             }
         }
     }
