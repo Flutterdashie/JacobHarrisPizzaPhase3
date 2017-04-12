@@ -76,8 +76,9 @@ namespace JacobHarrisPizzaPhase1
             radSizeLarge.Checked = false;
             radSizeMedium.Checked = false;
             radSizeSmall.Checked = true;
-        }
 
+            this.ValidateChildren();
+        }
         private void CustSearch()
         {
             string strPhone = txtCustPhone.Text;
@@ -96,6 +97,7 @@ namespace JacobHarrisPizzaPhase1
                 txtCustCity.Text = dtCust.Rows[0]["CustCity"].ToString();
                 cboCustState.Text = dtCust.Rows[0]["CustState"].ToString();
                 txtCustZipCode.Text = dtCust.Rows[0]["CustZip"].ToString();
+                this.ValidateChildren();
             }
             else
             {
@@ -349,11 +351,6 @@ namespace JacobHarrisPizzaPhase1
             else if (c == 8 || c == 32) ;
             else
                 e.Handled = true;
-        }
-
-        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void updatePriceTrigger(object sender, EventArgs e)
