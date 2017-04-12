@@ -51,6 +51,7 @@ namespace JacobHarrisPizzaPhase1
         }
         private void resetForm()
         {
+            acceptToolStripMenuItem.Enabled = false;
             btnAccept.Enabled = false;
             lblOrderNumValue.Text = String.Format("{0:0000}", currentOrderNum);
             //It feels so clunky to do it this way, I'm gonna revise this as soon as I can.
@@ -68,7 +69,8 @@ namespace JacobHarrisPizzaPhase1
             nudPizzaCount.Value = nudPizzaCount.Minimum;
 
             //Reset Checkboxes
-            clbToppings.ClearSelected();
+            for (int i = 0; i < clbToppings.Items.Count; i++)
+                clbToppings.SetItemCheckState(i, CheckState.Unchecked);
 
             //Reset Radio buttons (default is small)
             radSizeLarge.Checked = false;
@@ -172,6 +174,7 @@ namespace JacobHarrisPizzaPhase1
                             {
                                 erpValidationChecker.SetError(btnAccept, string.Empty);
                                 btnAccept.Enabled = true;
+                                acceptToolStripMenuItem.Enabled = true;
                                 return;
                             }
                         }
@@ -225,10 +228,6 @@ namespace JacobHarrisPizzaPhase1
             lblTaxValue.Text = String.Format("{0:C}", currentSalesTax);
             lblTotalValue.Text = String.Format("{0:C}", currentPrice);
 
-        }
-        private void btnPrice_Click(object sender, EventArgs e)
-        {
-            calcPrice();
         }
 
         private void txtCustName_Validating(object sender, CancelEventArgs e)
@@ -350,6 +349,16 @@ namespace JacobHarrisPizzaPhase1
             else if (c == 8 || c == 32) ;
             else
                 e.Handled = true;
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updatePriceTrigger(object sender, EventArgs e)
+        {
+            calcPrice();
         }
     }
 }

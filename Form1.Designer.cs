@@ -75,6 +75,12 @@
             this.btnPrice = new System.Windows.Forms.Button();
             this.tmrDateTimeSource = new System.Windows.Forms.Timer(this.components);
             this.erpValidationChecker = new System.Windows.Forms.ErrorProvider(this.components);
+            this.menuFormMenu = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.priceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acceptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.grpToppings.SuspendLayout();
@@ -84,6 +90,7 @@
             this.grpPaymentInfo.SuspendLayout();
             this.grpFormActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpValidationChecker)).BeginInit();
+            this.menuFormMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpCustomerData
@@ -102,7 +109,7 @@
             this.grpCustomerData.Controls.Add(this.txtCustName);
             this.grpCustomerData.Controls.Add(this.lblCustPhone);
             this.grpCustomerData.Controls.Add(this.txtCustPhone);
-            this.grpCustomerData.Location = new System.Drawing.Point(12, 79);
+            this.grpCustomerData.Location = new System.Drawing.Point(12, 102);
             this.grpCustomerData.Name = "grpCustomerData";
             this.grpCustomerData.Size = new System.Drawing.Size(299, 282);
             this.grpCustomerData.TabIndex = 1;
@@ -257,7 +264,7 @@
             // picTropicalLogo
             // 
             this.picTropicalLogo.Image = global::JacobHarrisPizzaPhase1.Properties.Resources.PalmTree;
-            this.picTropicalLogo.Location = new System.Drawing.Point(631, 16);
+            this.picTropicalLogo.Location = new System.Drawing.Point(631, 39);
             this.picTropicalLogo.Name = "picTropicalLogo";
             this.picTropicalLogo.Size = new System.Drawing.Size(268, 520);
             this.picTropicalLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -269,7 +276,7 @@
             this.lblParlorName.AutoSize = true;
             this.lblParlorName.Font = new System.Drawing.Font("Showcard Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblParlorName.ForeColor = System.Drawing.Color.DarkSalmon;
-            this.lblParlorName.Location = new System.Drawing.Point(32, 16);
+            this.lblParlorName.Location = new System.Drawing.Point(32, 39);
             this.lblParlorName.Name = "lblParlorName";
             this.lblParlorName.Size = new System.Drawing.Size(406, 60);
             this.lblParlorName.TabIndex = 0;
@@ -278,7 +285,7 @@
             // lblCurrentDateTime
             // 
             this.lblCurrentDateTime.AutoSize = true;
-            this.lblCurrentDateTime.Location = new System.Drawing.Point(436, 38);
+            this.lblCurrentDateTime.Location = new System.Drawing.Point(436, 61);
             this.lblCurrentDateTime.Name = "lblCurrentDateTime";
             this.lblCurrentDateTime.Size = new System.Drawing.Size(115, 13);
             this.lblCurrentDateTime.TabIndex = 5;
@@ -297,6 +304,7 @@
             // 
             // clbToppings
             // 
+            this.clbToppings.CheckOnClick = true;
             this.clbToppings.FormattingEnabled = true;
             this.clbToppings.Items.AddRange(new object[] {
             "Cheese",
@@ -313,6 +321,8 @@
             this.clbToppings.Name = "clbToppings";
             this.clbToppings.Size = new System.Drawing.Size(97, 229);
             this.clbToppings.TabIndex = 10;
+            this.clbToppings.Click += new System.EventHandler(this.updatePriceTrigger);
+            this.clbToppings.SelectedIndexChanged += new System.EventHandler(this.updatePriceTrigger);
             // 
             // grpPizzaSize
             // 
@@ -336,6 +346,7 @@
             this.radSizeLarge.TabStop = true;
             this.radSizeLarge.Text = "Large ($15.00)";
             this.radSizeLarge.UseVisualStyleBackColor = true;
+            this.radSizeLarge.CheckedChanged += new System.EventHandler(this.updatePriceTrigger);
             // 
             // radSizeMedium
             // 
@@ -347,6 +358,7 @@
             this.radSizeMedium.TabStop = true;
             this.radSizeMedium.Text = "Medium ($12.00)";
             this.radSizeMedium.UseVisualStyleBackColor = true;
+            this.radSizeMedium.CheckedChanged += new System.EventHandler(this.updatePriceTrigger);
             // 
             // radSizeSmall
             // 
@@ -359,6 +371,7 @@
             this.radSizeSmall.TabStop = true;
             this.radSizeSmall.Text = "Small ($9.00)";
             this.radSizeSmall.UseVisualStyleBackColor = true;
+            this.radSizeSmall.CheckedChanged += new System.EventHandler(this.updatePriceTrigger);
             // 
             // grpOrderInfo
             // 
@@ -369,7 +382,7 @@
             this.grpOrderInfo.Controls.Add(this.nudPizzaCount);
             this.grpOrderInfo.Controls.Add(this.grpPizzaSize);
             this.grpOrderInfo.Controls.Add(this.grpToppings);
-            this.grpOrderInfo.Location = new System.Drawing.Point(317, 79);
+            this.grpOrderInfo.Location = new System.Drawing.Point(317, 102);
             this.grpOrderInfo.Name = "grpOrderInfo";
             this.grpOrderInfo.Size = new System.Drawing.Size(168, 457);
             this.grpOrderInfo.TabIndex = 3;
@@ -433,6 +446,7 @@
             0,
             0,
             0});
+            this.nudPizzaCount.ValueChanged += new System.EventHandler(this.updatePriceTrigger);
             // 
             // grpPaymentInfo
             // 
@@ -444,7 +458,7 @@
             this.grpPaymentInfo.Controls.Add(this.lblPaymentMethod);
             this.grpPaymentInfo.Controls.Add(this.lblSubtotalText);
             this.grpPaymentInfo.Controls.Add(this.cboPaymentMethod);
-            this.grpPaymentInfo.Location = new System.Drawing.Point(12, 367);
+            this.grpPaymentInfo.Location = new System.Drawing.Point(12, 390);
             this.grpPaymentInfo.Name = "grpPaymentInfo";
             this.grpPaymentInfo.Size = new System.Drawing.Size(299, 169);
             this.grpPaymentInfo.TabIndex = 2;
@@ -540,7 +554,7 @@
             this.grpFormActions.Controls.Add(this.btnAccept);
             this.grpFormActions.Controls.Add(this.btnReset);
             this.grpFormActions.Controls.Add(this.btnPrice);
-            this.grpFormActions.Location = new System.Drawing.Point(503, 79);
+            this.grpFormActions.Location = new System.Drawing.Point(503, 102);
             this.grpFormActions.Name = "grpFormActions";
             this.grpFormActions.Size = new System.Drawing.Size(122, 457);
             this.grpFormActions.TabIndex = 4;
@@ -585,7 +599,7 @@
             this.btnPrice.TabIndex = 0;
             this.btnPrice.Text = "&Price";
             this.btnPrice.UseVisualStyleBackColor = true;
-            this.btnPrice.Click += new System.EventHandler(this.btnPrice_Click);
+            this.btnPrice.Click += new System.EventHandler(this.updatePriceTrigger);
             // 
             // tmrDateTimeSource
             // 
@@ -598,12 +612,63 @@
             this.erpValidationChecker.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.erpValidationChecker.ContainerControl = this;
             // 
+            // menuFormMenu
+            // 
+            this.menuFormMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.menuFormMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuFormMenu.Location = new System.Drawing.Point(0, 0);
+            this.menuFormMenu.Name = "menuFormMenu";
+            this.menuFormMenu.Size = new System.Drawing.Size(907, 24);
+            this.menuFormMenu.TabIndex = 0;
+            this.menuFormMenu.Text = "menuFormMenu";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.priceToolStripMenuItem,
+            this.resetToolStripMenuItem,
+            this.acceptToolStripMenuItem,
+            this.quitToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // priceToolStripMenuItem
+            // 
+            this.priceToolStripMenuItem.Name = "priceToolStripMenuItem";
+            this.priceToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.priceToolStripMenuItem.Text = "Price";
+            this.priceToolStripMenuItem.Click += new System.EventHandler(this.updatePriceTrigger);
+            // 
+            // resetToolStripMenuItem
+            // 
+            this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.resetToolStripMenuItem.Text = "Reset";
+            this.resetToolStripMenuItem.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // acceptToolStripMenuItem
+            // 
+            this.acceptToolStripMenuItem.Name = "acceptToolStripMenuItem";
+            this.acceptToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.acceptToolStripMenuItem.Text = "Accept";
+            this.acceptToolStripMenuItem.Click += new System.EventHandler(this.btnAccept_Click);
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitToolStripMenuItem.Text = "Close";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
-            this.ClientSize = new System.Drawing.Size(907, 543);
+            this.ClientSize = new System.Drawing.Size(907, 579);
+            this.Controls.Add(this.menuFormMenu);
             this.Controls.Add(this.grpFormActions);
             this.Controls.Add(this.grpPaymentInfo);
             this.Controls.Add(this.grpOrderInfo);
@@ -611,6 +676,7 @@
             this.Controls.Add(this.lblParlorName);
             this.Controls.Add(this.picTropicalLogo);
             this.Controls.Add(this.grpCustomerData);
+            this.MainMenuStrip = this.menuFormMenu;
             this.Name = "frmPizzaOrder";
             this.Text = "Tropical Pizza Order Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPizzaOrder_FormClosing);
@@ -628,6 +694,8 @@
             this.grpPaymentInfo.PerformLayout();
             this.grpFormActions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.erpValidationChecker)).EndInit();
+            this.menuFormMenu.ResumeLayout(false);
+            this.menuFormMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -681,6 +749,12 @@
         private System.Windows.Forms.Timer tmrDateTimeSource;
         private System.Windows.Forms.ErrorProvider erpValidationChecker;
         private System.Windows.Forms.CheckedListBox clbToppings;
+        private System.Windows.Forms.MenuStrip menuFormMenu;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem priceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acceptToolStripMenuItem;
     }
 }
 
