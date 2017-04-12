@@ -48,6 +48,7 @@
             this.lblParlorName = new System.Windows.Forms.Label();
             this.lblCurrentDateTime = new System.Windows.Forms.Label();
             this.grpToppings = new System.Windows.Forms.GroupBox();
+            this.clbToppings = new System.Windows.Forms.CheckedListBox();
             this.grpPizzaSize = new System.Windows.Forms.GroupBox();
             this.radSizeLarge = new System.Windows.Forms.RadioButton();
             this.radSizeMedium = new System.Windows.Forms.RadioButton();
@@ -74,7 +75,6 @@
             this.btnPrice = new System.Windows.Forms.Button();
             this.tmrDateTimeSource = new System.Windows.Forms.Timer(this.components);
             this.erpValidationChecker = new System.Windows.Forms.ErrorProvider(this.components);
-            this.clbToppings = new System.Windows.Forms.CheckedListBox();
             this.grpCustomerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTropicalLogo)).BeginInit();
             this.grpToppings.SuspendLayout();
@@ -249,6 +249,7 @@
             this.txtCustPhone.SkipLiterals = false;
             this.txtCustPhone.TabIndex = 3;
             this.txtCustPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtCustPhone.TextChanged += new System.EventHandler(this.txtCustPhone_TextChanged);
             this.txtCustPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtCustPhone_Validating);
             // 
             // picTropicalLogo
@@ -291,6 +292,25 @@
             this.grpToppings.TabIndex = 2;
             this.grpToppings.TabStop = false;
             this.grpToppings.Text = "&Toppings";
+            // 
+            // clbToppings
+            // 
+            this.clbToppings.FormattingEnabled = true;
+            this.clbToppings.Items.AddRange(new object[] {
+            "Cheese",
+            "Pepperoni",
+            "Ham",
+            "Sausage",
+            "Anchovies",
+            "Sliced Peppers",
+            "Chicken",
+            "Mushrooms",
+            "Green Olives",
+            "Pineapple"});
+            this.clbToppings.Location = new System.Drawing.Point(14, 19);
+            this.clbToppings.Name = "clbToppings";
+            this.clbToppings.Size = new System.Drawing.Size(97, 229);
+            this.clbToppings.TabIndex = 10;
             // 
             // grpPizzaSize
             // 
@@ -576,25 +596,6 @@
             this.erpValidationChecker.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.erpValidationChecker.ContainerControl = this;
             // 
-            // clbToppings
-            // 
-            this.clbToppings.FormattingEnabled = true;
-            this.clbToppings.Items.AddRange(new object[] {
-            "Cheese",
-            "Pepperoni",
-            "Ham",
-            "Sausage",
-            "Anchovies",
-            "Sliced Peppers",
-            "Chicken",
-            "Mushrooms",
-            "Green Olives",
-            "Pineapple"});
-            this.clbToppings.Location = new System.Drawing.Point(14, 19);
-            this.clbToppings.Name = "clbToppings";
-            this.clbToppings.Size = new System.Drawing.Size(97, 229);
-            this.clbToppings.TabIndex = 10;
-            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,7 +624,6 @@
             this.grpPaymentInfo.ResumeLayout(false);
             this.grpPaymentInfo.PerformLayout();
             this.grpFormActions.ResumeLayout(false);
-            this.grpFormActions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpValidationChecker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

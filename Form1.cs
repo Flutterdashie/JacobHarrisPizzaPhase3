@@ -8,11 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace JacobHarrisPizzaPhase1
 {
     public partial class frmPizzaOrder : Form
     {
+        SqlConnection sqlConn;
+        SqlDataAdapter sqlDA;
+        DataTable dtCust;
+        SqlCommandBuilder sqlCmdBlr;
+        string strDataSrc = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|Pizza.mdf;";
+        string strSQLparms = "Integrated Security=True;Connect Timeout=10";
         const decimal SALES_TAX_RATE = 0.07M;
         int currentOrderNum;
         public frmPizzaOrder()
@@ -67,6 +74,66 @@ namespace JacobHarrisPizzaPhase1
             radSizeLarge.Checked = false;
             radSizeMedium.Checked = false;
             radSizeSmall.Checked = true;
+        }
+
+        private void CustSearch()
+        {
+            string strPhone = txtCustPhone.Text;
+            string sqlSelect = "SELECT * FROM Customers WHERE CustPhone = '" + strPhone + "';";
+            string strConn = strDataSrc + strSQLparms;
+            sqlConn = new SqlConnection(strConn);
+            sqlConn.Open();  //grab that connection
+            sqlDA = new SqlDataAdapter(sqlSelect, sqlConn);
+            dtCust = new DataTable();
+            sqlDA.Fill(dtCust);
+            if (dtCust.Rows.Count > 0)
+            {
+                txtCustName.Text = dtCust.Rows[0]["CustName"].ToString();
+                txtCustAddress1.Text = dtCust.Rows[0]["CustAddress1"].ToString();
+                txtCustAddress2.Text = dtCust.Rows[0]["CustAddress2"].ToString();
+                txtCustCity.Text = dtCust.Rows[0]["CustCity"].ToString();
+                cboCustState.Text = dtCust.Rows[0]["CustState"].ToString();
+                txtCustZipCode.Text = dtCust.Rows[0]["CustZip"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Customer not found. Accepting current order will create database entry.", "New Customer", MessageBoxButtons.OK);
+                txtCustName.Focus();
+            }
+            
+
+        }
+
+        private void addCust(Customer newCust)
+        {
+            try
+            {
+                DataRow custToAdd;
+                custToAdd = dtCust.NewRow();
+                custToAdd["CustPhone"] = newCust.Phone;
+                custToAdd["CustName"] = newCust.Name;
+                custToAdd["CustAddress1"] = newCust.Addr1;
+                custToAdd["CustAddress2"] = newCust.Addr2;
+                custToAdd["CustCity"] = newCust.City;
+                custToAdd["CustState"] = newCust.State;
+                custToAdd["CustZip"] = newCust.Zip;
+                dtCust.Rows.Add(custToAdd);
+                sqlCmdBlr = new SqlCommandBuilder(sqlDA);
+                sqlCmdBlr.GetUpdateCommand();
+                sqlDA.Update(dtCust);
+            }
+            catch (SqlException e)
+            {
+                DialogResult logErrorData = MessageBox.Show("Customer Adding failed. Please contact the developer.\nSave error log?", "Oh no", MessageBoxButtons.YesNo);
+                if (logErrorData == DialogResult.Yes)
+                {
+                    FileStream errLogStream = new FileStream(Application.StartupPath + "\\errlog.txt", FileMode.Append, FileAccess.Write);
+                    StreamWriter errLogWriter = new StreamWriter(errLogStream);
+                    calcPrice();
+                    errLogWriter.WriteLine(e.StackTrace);
+                    errLogWriter.Close();
+                }
+            }
         }
 
         private void populateStateBox()
@@ -143,6 +210,7 @@ namespace JacobHarrisPizzaPhase1
             calcPrice();
             logWriter.WriteLine(lblOrderNumValue.Text + "," + curCust.Phone + "," + curCust.Name + "," + lblTotalValue.Text);
             logWriter.Close();
+            addCust(curCust);
             currentOrderNum++;
             resetForm();
             ValidateChildren();
@@ -178,21 +246,25 @@ namespace JacobHarrisPizzaPhase1
                 erpValidationChecker.SetError(txtCustName, string.Empty);
             }
         }
-
-        private void txtCustPhone_Validating(object sender, CancelEventArgs e)
+        private void validatePhone()
         {
             if ((txtCustPhone.Text.Length < 10) || (txtCustPhone.Text.Contains(" ")))
             {
-                
+
                 btnAccept.Enabled = false;
                 erpValidationChecker.SetError(txtCustPhone, "Must be 10 digits");
             }
             else
             {
-                
+
                 tryEnableAccept();
                 erpValidationChecker.SetError(txtCustPhone, string.Empty);
             }
+        }
+
+        private void txtCustPhone_Validating(object sender, CancelEventArgs e)
+        {
+            validatePhone();
         }
 
         private void txtCustZipCode_Validating(object sender, CancelEventArgs e)
@@ -254,6 +326,15 @@ namespace JacobHarrisPizzaPhase1
         private void btnClose_Click(object sender, EventArgs e)
         {
             getClosePrompt();
+        }
+
+        private void txtCustPhone_TextChanged(object sender, EventArgs e)
+        {
+            validatePhone();
+            if(erpValidationChecker.GetError(txtCustPhone) == String.Empty)
+            {
+                CustSearch();
+            }
         }
     }
 }
